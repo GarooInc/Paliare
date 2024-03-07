@@ -1,20 +1,48 @@
 "use client";
-import { useState } from 'react'
+import React, { useState, useEffect } from 'react'
+import { textsEN } from '@/public/locales/en'
+import { textsES } from '@/public/locales/es'
+import LanguageSwitcher from '@/components/LanguageSwitcher/LanguageSwitcher'
 import { Dialog } from '@headlessui/react'
 import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/outline'
 import { Link } from "react-scroll"
+import { useRouter } from "next/navigation"
 
 
-const navigation = [
-  { name: 'Inicio', href: 'about' },
-  { name: 'Filosofía', href: '/' },
-  { name: 'Proyectos', href: '/' },
-  { name: 'Servicios', href: '/' },
-  { name: 'Contacto', href: '/' },
-]
 
 const NavBar = () => {
+    const [language, setLanguage] = useState('')
+
+    const textos = language === 'en' ? textsEN : textsES
+    
+    useEffect(() => {
+        const lang = localStorage.getItem('language')
+        if (lang) setLanguage(lang)
+    }, [])
+
+    const changeLanguage = (lang) => {
+        setLanguage(lang)
+        localStorage.setItem('language', lang)
+    }
+
+    console.log('language menu', language)
+
+    const navigation = [
+      { name: textos.menu_home, href: '/'},
+      { name: textos.menu_philosophy, href: '/filosofia' },
+      { name: textos.menu_projects, href: '/proyectos' },
+      { name: textos.menu_services, href: '/servicios' },
+      { name: textos.menu_contact, href: '/contacto' },
+    ]
+
     const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
+    const router = useRouter()
+
+    const onClickNav = (href) => {
+      router.push(href)
+      setMobileMenuOpen(false)
+    }
+
   return (
     <header className="absolute inset-x-0 top-0 z-50">
         <nav className="flex items-center justify-between p-6 lg:px-8" aria-label="Global">
@@ -61,10 +89,14 @@ const NavBar = () => {
             </div>
             <div className="mt-6 flow-root">
                   {navigation.map((item) => (
-                    <Link key={item.name} to={item.href} spy={true} smooth={true} duration={500} onClick={() => setMobileMenuOpen(false)} className="lg:ml-40 ml-20 uppercase block py-4 text-2xl lg:text-4xl font-semibold leading-7 font-anton text-white cursor-pointer">
+                    <button onClick={() => onClickNav(item.href)} key={item.name}
+                    className="lg:ml-40 ml-20 uppercase block py-4 text-2xl lg:text-4xl font-semibold leading-7 font-anton text-white cursor-pointer">
                       {item.name}
-                    </Link>
+                    </button>
                   ))}
+            </div>
+            <div className="mt-6">
+              <LanguageSwitcher onClick={() => changeLanguage(language === 'en' ? 'es' : 'en')} />
             </div>
           </Dialog.Panel>
         </Dialog>
