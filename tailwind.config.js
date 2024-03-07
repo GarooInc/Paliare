@@ -28,6 +28,8 @@
       fontFamily: {
         satoshi: ['Satoshi', 'sans-serif'],
         inter: ['inter', 'sans-serif'],
+        montserrat: ['montserrat', 'sans-serif'],
+        anton : ['anton', 'sans-serif'],
       },
       colors: {
         "purplelight": "#d69de5",
