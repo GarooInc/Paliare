@@ -1,38 +1,22 @@
 "use client";
 import React, { useState, useEffect } from 'react'
-import { textsEN } from '@/public/locales/en'
-import { textsES } from '@/public/locales/es'
 import LanguageSwitcher from '@/components/LanguageSwitcher/LanguageSwitcher'
 import { Dialog } from '@headlessui/react'
 import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/outline'
-import { Link } from "react-scroll"
 import { useRouter } from "next/navigation"
+import { useTranslation } from 'react-i18next'
 
 
 
-const NavBar = () => {
-    const [language, setLanguage] = useState('')
-
-    const textos = language === 'en' ? textsEN : textsES
-    
-    useEffect(() => {
-        const lang = localStorage.getItem('language')
-        if (lang) setLanguage(lang)
-    }, [])
-
-    const changeLanguage = (lang) => {
-        setLanguage(lang)
-        localStorage.setItem('language', lang)
-    }
-
-    console.log('language menu', language)
+const NavBar = ({primary}) => {
+    const { t } = useTranslation()
 
     const navigation = [
-      { name: textos.menu_home, href: '/'},
-      { name: textos.menu_philosophy, href: '/filosofia' },
-      { name: textos.menu_projects, href: '/proyectos' },
-      { name: textos.menu_services, href: '/servicios' },
-      { name: textos.menu_contact, href: '/contacto' },
+      { name: t('header:menu_home'), href: '/' },
+      { name: t('header:menu_philosophy'), href: '/filosofia' },
+      { name: t('header:menu_projects'), href: '/projects' },
+      { name: t('header:menu_services'), href: '/services' },
+      { name: t('header:menu_contact'), href: '/contact' },
     ]
 
     const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
@@ -50,7 +34,7 @@ const NavBar = () => {
             <a href="#" className="-m-1.5 p-0">
               <div className="h-24">
               <img
-                className="lg:hidden h-24 w-auto"
+                className= {primary ? "lg:hidden h-24 w-auto" : "h-24 w-auto"}
                 src="/assets/images/paliarenegro.png"
                 alt=""
               />
