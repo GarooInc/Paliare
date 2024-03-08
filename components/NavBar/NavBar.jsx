@@ -57,7 +57,7 @@ const NavBar = ({primary}) => {
             <div className="flex items-center justify-between">
               <a href="#" className="-m-1.5 p-1.5">
                 <img
-                  className="lg:h-40 h-24 w-auto"
+                  className="lg:h-40 h-24 w-auto hover:outline-none focus:outline-none"
                   src="/assets/images/paliareblanco.png"
                   alt=""
                 />

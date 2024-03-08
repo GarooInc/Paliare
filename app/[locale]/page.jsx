@@ -11,9 +11,25 @@ export default async function Home({ params: { locale }}) {
     return (
         <TranslationsProvider locale={locale} namespaces={namespaces} resources={resources}>
         <NavBar primary/>
-        <main className="flex min-h-screen w-full pt-20">
-            <h1 className="text-4xl font-bold">{t('homepage_title')}</h1>
-            <span className="text-2xl">{t('homepage_subtitle')}</span>
+        <main className="flex min-h-screen w-full flex-col pt-20">
+            <section className="normal_section h-screen section_img_background gap-2">
+                <div className='h-40'>
+                    <img
+                        className="h-40 w-auto lg:block xs:hidden"
+                        src="/assets/images/paliarenegro.png"
+                        alt=""
+                    />
+                </div>
+                <h1 className="tittle">{t('homepage_title')}</h1>
+                <span className="subtitle lg:w-1/4">{t('homepage_subtitle')}</span>
+                <a href="/filosofia" className="text-md border-b-2 border-black font-montserrat">{t('homepage_kwowmore')}</a>
+            </section>
+            <section className="normal_section">
+                <h1 className="text-4xl font-montserrat flex gap-2">
+                    <span className='font-bold'>{t('homepage_section_1_title_1')}</span>
+                    <span className='font-light'>{t('homepage_section_1_title_1_1')}</span>
+                </h1>
+            </section>
             <LanguageSwitcher />
         </main>
         </TranslationsProvider>
