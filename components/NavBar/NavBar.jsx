@@ -37,6 +37,7 @@ const NavBar = ({primary}) => {
                 className= {primary ? "lg:hidden h-20 w-auto" : "h-20 w-auto"}
                 src="/assets/images/homepage/logonegro.png"
                 alt=""
+                onClick = {() => router.push('/')}
               />
               </div>
             </a>
@@ -78,9 +79,6 @@ const NavBar = ({primary}) => {
                       {item.name}
                     </button>
                   ))}
-            </div>
-            <div className="mt-6">
-              <LanguageSwitcher onClick={() => changeLanguage(language === 'en' ? 'es' : 'en')} />
             </div>
           </Dialog.Panel>
         </Dialog>

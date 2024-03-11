@@ -3,6 +3,8 @@ import initTranslations from '@/app/i18n'
 import TranslationsProvider from '@/components/TranslationsProvider'
 import NavBar from '@/components/NavBar/NavBar'
 import LanguageSwitcher from '@/components/LanguageSwitcher/LanguageSwitcher'
+import ArrowBack from '@/components/ArrowBack/ArrowBack'
+import { useRouter } from "next/navigation"
 
 const namespaces = ['filosofia', 'header']
 export default async function Filosofia({ params: { locale }}) {
@@ -11,16 +13,20 @@ export default async function Filosofia({ params: { locale }}) {
     return (
         <TranslationsProvider locale={locale} namespaces={namespaces} resources={resources}>
         <NavBar/>
-        <main className="flex min-h-screen w-full pt-40">
+        <main className="flex min-h-screen w-full pt-28">
             <div className='flex flex-col w-full'>
+                <ArrowBack />
                 <section className="normal_section">
-                <h1 className="tittle_v2">{t('philosophy_title')}</h1>
+                <h1 className="tittle_v2">
+                    {t('philosophy_title')}
+                </h1>
                 <span className="subtitle_mid text-center lg:w-1/2">{t('philosophy_text_1')}</span>
                 <img src="/assets/images/filosofia/fotoequipoejemplo.jpeg" alt="fotoequipoejemplo" className="w-full lg:h-[700px] object-cover" />
                 <span className="tittle lg:w-1/2 py-20">{t('philosophy_text_2')}</span>
                 </section>
-                <div className='flex flex-col bg-black w-full p-10'>
+                <div className='flex flex-col bg-black w-full p-10 justify-center items-center'>
                     <span className="text-white text-center text-2xl anton font-light">"{t('philosophy_subtitle')}"</span>
+                    <img src="/assets/images/filosofia/logopatygris.png" alt="hormigas" className="w-40 object-cover" />
                 </div>
                 <div className="normal_section pt-10">
                     <div className="flex flex-col lg:flex-row lg:justify-between items-center relative">

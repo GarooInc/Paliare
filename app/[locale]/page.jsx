@@ -3,6 +3,7 @@ import initTranslations from '../i18n'
 import TranslationsProvider from '@/components/TranslationsProvider'
 import NavBar from '@/components/NavBar/NavBar'
 import LanguageSwitcher from '@/components/LanguageSwitcher/LanguageSwitcher'
+import { IoIosArrowRoundDown } from "react-icons/io"
 
 const namespaces = ['homepage', 'header']
 export default async function Home({ params: { locale }}) {
@@ -23,6 +24,7 @@ export default async function Home({ params: { locale }}) {
                 <h1 className="maintitle">{t('homepage_title')}</h1>
                 <span className="subtitle lg:w-1/4">{t('homepage_subtitle')}</span>
                 <a href="/filosofia" className="text-md border-b-2 border-black mont">{t('homepage_kwowmore')}</a>
+                <IoIosArrowRoundDown className="text-4xl text-black font-light"  />
             </section>
             <section className="normal_section pt-20 min-h-screen">
                 <div className="w-full flex lg:justify-start justify-center">
