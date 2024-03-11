@@ -32,10 +32,10 @@ const NavBar = ({primary}) => {
         <nav className="flex items-center justify-between p-6 lg:px-8" aria-label="Global">
           <div className="flex lg:flex-1">
             <a href="#" className="-m-1.5 p-0">
-              <div className="h-24">
+              <div className="h-20">
               <img
-                className= {primary ? "lg:hidden h-24 w-auto" : "h-24 w-auto"}
-                src="/assets/images/paliarenegro.png"
+                className= {primary ? "lg:hidden h-20 w-auto" : "h-20 w-auto"}
+                src="/assets/images/homepage/logonegro.png"
                 alt=""
               />
               </div>
@@ -57,8 +57,8 @@ const NavBar = ({primary}) => {
             <div className="flex items-center justify-between">
               <a href="#" className="-m-1.5 p-1.5">
                 <img
-                  className="lg:h-40 h-24 w-auto hover:outline-none focus:outline-none"
-                  src="/assets/images/paliareblanco.png"
+                  className="lg:h-20 h-24 w-auto hover:outline-none focus:outline-none"
+                  src="/assets/images/homepage/logoblanco.png"
                   alt=""
                 />
               </a>
@@ -71,7 +71,7 @@ const NavBar = ({primary}) => {
                 <XMarkIcon className="h-6 w-6 text-white" aria-hidden="true" />
               </button>
             </div>
-            <div className="mt-6 flow-root">
+            <div className="mt-10 lg:mt-20 flow-root">
                   {navigation.map((item) => (
                     <button onClick={() => onClickNav(item.href)} key={item.name}
                     className="lg:ml-40 ml-20 uppercase block py-4 text-2xl lg:text-4xl font-semibold leading-7 font-anton text-white cursor-pointer">

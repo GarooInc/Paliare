@@ -12,7 +12,7 @@ export default async function Home({ params: { locale }}) {
         <TranslationsProvider locale={locale} namespaces={namespaces} resources={resources}>
         <NavBar primary/>
         <main className="flex min-h-screen w-full flex-col pt-20">
-            <section className="normal_section lg:pt-20 section_img_background gap-2">
+            <section className="normal_section pt-20 section_img_background gap-2">
                 <div className='h-40'>
                     <img
                         className="h-28 w-auto lg:block xs:hidden"
@@ -20,7 +20,7 @@ export default async function Home({ params: { locale }}) {
                         alt=""
                     />
                 </div>
-                <h1 className="tittle">{t('homepage_title')}</h1>
+                <h1 className="maintitle">{t('homepage_title')}</h1>
                 <span className="subtitle lg:w-1/4">{t('homepage_subtitle')}</span>
                 <a href="/filosofia" className="text-md border-b-2 border-black mont">{t('homepage_kwowmore')}</a>
             </section>
