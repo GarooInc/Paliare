@@ -58,7 +58,7 @@ const NavBar = ({primary}) => {
             <div className="flex items-center justify-between">
               <a href="#" className="-m-1.5 p-1.5">
                 <img
-                  className="lg:h-20 h-24 w-auto hover:outline-none focus:outline-none"
+                  className="lg:h-20 h-24 w-auto outline-none focus:outline-none"
                   src="/assets/images/homepage/logoblanco.png"
                   alt=""
                 />
@@ -69,7 +69,7 @@ const NavBar = ({primary}) => {
                 onClick={() => setMobileMenuOpen(false)}
               >
                 <span className="sr-only">Close menu</span>
-                <XMarkIcon className="h-6 w-6 text-white" aria-hidden="true" />
+                <XMarkIcon className="h-6 w-6 text-white outline-none focus:outline-none" aria-hidden="true" />
               </button>
             </div>
             <div className="mt-10 lg:mt-20 flow-root">

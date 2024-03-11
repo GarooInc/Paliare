@@ -32,8 +32,8 @@ export default async function Filosofia({ params: { locale }}) {
                     <div className="flex flex-col lg:flex-row lg:justify-between items-center relative">
                         <h1 className="tittle_v2">{t('philosophy_section_2_text_1')}</h1>
                         <div className="lg:hidden xs:flex flex-col justify-center items-center">
-                            <span className="subtitle_mid lg:text-start">{t('philosophy_section_2_text_2')}</span>
-                            <ul className="w-3/4 lg:pl-10 pt-6">
+                            <span className="subtitle_mid text-justify pt-10">{t('philosophy_section_2_text_2')}</span>
+                            <ul className="pl-6 pt-6">
                                 <li className="list-disc subtitle_mid text-lg  font-medium text-start">{t('philosophy_section_2_text_2_1')}</li>
                                 <li className="list-disc subtitle_mid text-lg  font-medium text-start">{t('philosophy_section_2_text_2_2')}</li>
                                 <li className="list-disc subtitle_mid text-lg  font-medium text-start">{t('philosophy_section_2_text_2_3')}</li>
