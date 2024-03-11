@@ -25,7 +25,7 @@ export default async function Filosofia({ params: { locale }}) {
                 <span className="tittle lg:w-1/2 py-20">{t('philosophy_text_2')}</span>
                 </section>
                 <div className='flex flex-col bg-black w-full p-10 justify-center items-center'>
-                    <span className="text-white text-center text-2xl anton font-light">"{t('philosophy_subtitle')}"</span>
+                    <span className="text-white text-center text-2xl anton font-light">{t('philosophy_subtitle')}</span>
                     <img src="/assets/images/filosofia/logopatygris.png" alt="hormigas" className="w-40 object-cover" />
                 </div>
                 <div className="normal_section pt-10">
