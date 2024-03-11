@@ -16,8 +16,8 @@ export default async function Filosofia({ params: { locale }}) {
         <main className="flex min-h-screen w-full pt-28">
             <div className='flex flex-col w-full'>
                 <ArrowBack />
-                <section className="normal_section">
-                <h1 className="tittle_v2">
+                <section className="normal_section pt-10">
+                <h1 className="tittle_v2 py-4">
                     {t('philosophy_title')}
                 </h1>
                 <span className="subtitle_mid text-center lg:w-1/2">{t('philosophy_text_1')}</span>
