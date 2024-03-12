@@ -1,4 +1,5 @@
 import "@/styles/globals.css"
+import Footer from "@/components/Footer/page"
 
 
 export const metadata = {
@@ -25,6 +26,7 @@ const RootLayout = ({children}) => {
         <body>
             <main className='app'>
                   {children}
+                  <Footer />
             </main>
         </body>
     </html>

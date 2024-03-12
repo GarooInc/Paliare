@@ -72,3 +72,8 @@
   @apply list-disc subtitle_mid text-lg  font-medium text-start text-black;
 }
 
+
+/* contact */
+.input_contact{
+  @apply w-full h-12 border-2 border-white rounded-md px-4 bg-transparent text-white mont focus:outline-none;
+}

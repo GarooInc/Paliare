@@ -15,7 +15,7 @@ const NavBar = ({primary}) => {
       { name: t('header:menu_philosophy'), href: '/filosofia' },
       { name: t('header:menu_projects'), href: '/projects' },
       { name: t('header:menu_services'), href: '/services' },
-      { name: t('header:menu_contact'), href: '/contact' },
+      { name: t('header:menu_contact'), href: '/contacto' },
     ]
 
     const [mobileMenuOpen, setMobileMenuOpen] = useState(false)

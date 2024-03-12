@@ -34,6 +34,7 @@
       colors: {
         "darkgray": "#262626",
         "lightgray": "#F2F2F2",
+        "lightergray": "#EBEBEB",
       },
     },
   },
