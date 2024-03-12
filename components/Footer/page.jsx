@@ -31,7 +31,7 @@ const Footer = () => {
         </aside>
         <img src="/assets/images/homepage/logonegro.png" alt="logo" className="w-24" /> 
         <nav className="flex justify-center items-center">
-            <span className="text-darkgray mont text-md">{t('header:lemma')}</span>
+            <span className="text-darkgray mont lg:text-md xs:text-xs ">{t('header:lemma')}</span>
             <div className='flex gap-2'>
             <BsInstagram className="text-darkgray text-2xl" />
             <FaFacebookF className="text-darkgray text-2xl" />
