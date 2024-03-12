@@ -1,6 +1,5 @@
 "use client";
 import React, { useState, useEffect } from 'react'
-import LanguageSwitcher from '@/components/LanguageSwitcher/LanguageSwitcher'
 import { Dialog } from '@headlessui/react'
 import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/outline'
 import { useRouter } from "next/navigation"
@@ -28,7 +27,7 @@ const NavBar = ({primary}) => {
     }
 
   return (
-    <header className="absolute inset-x-0 top-0 z-50">
+    <header className="absolute inset-x-0 top-0 z-50 bg-white">
         <nav className="flex items-center justify-between p-6 lg:px-8" aria-label="Global">
           <div className="flex lg:flex-1">
             <a href="#" className="-m-1.5 p-0">

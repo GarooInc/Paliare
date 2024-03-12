@@ -25,12 +25,19 @@
   height: 100vh;
 }
 
+.section_doodle{
+  background: url('/assets/images/homepage/doodle.svg');
+  background-color: #F2F2F2;
+  background-position: center center;
+  background-repeat: no-repeat;
+}
+
 .normal_section{
   @apply flex flex-col items-center justify-start w-full lg:px-40 px-10;
 }
 
 .maintitle{
-  @apply lg:text-6xl text-5xl font-anton text-center uppercase w-2/3;
+  @apply lg:text-6xl text-5xl font-anton text-center uppercase w-2/3 text-black;
 }
 
 .tittle{

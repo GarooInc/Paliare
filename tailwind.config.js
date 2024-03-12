@@ -32,8 +32,10 @@
         anton : ['anton', 'sans-serif'],
       },
       colors: {
-        "purplelight": "#d69de5",
+        "darkgray": "#262626",
+        "lightgray": "#F2F2F2",
       },
     },
   },
+  plugins: [require("daisyui")],
 }
