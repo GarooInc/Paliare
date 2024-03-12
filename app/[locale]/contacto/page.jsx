@@ -26,7 +26,7 @@ export default async function Contacto({ params: { locale }}) {
                         <button className="text-white mont btn border-2 border-white w-full mt-10 hover:bg-white hover:text-black">{t('contact_form_send')}</button>
                     </div>
                 </form>
-                <div className="flex flex-col lg:w-1/3 w-full py-10 gap-4 normal_section">
+                <div className="flex flex-col w-full py-10 gap-4 normal_section">
                     <span className="subtitle_mid text-center text-black">{t('contact_subtitle_1')}</span>
                     <span className="text-2xl mont text-center font-semibold text-black uppercase">{t('contact_subtitle_2')}</span>
                 </div>
