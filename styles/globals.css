@@ -68,3 +68,7 @@
   @apply font-anton;
 }
 
+.liststyle{
+  @apply list-disc subtitle_mid text-lg  font-medium text-start text-black;
+}
+
