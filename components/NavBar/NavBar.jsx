@@ -7,13 +7,13 @@ import { useTranslation } from 'react-i18next'
 
 
 
-const NavBar = ({primary}) => {
+const NavBar = ({primary, transparent}) => {
     const { t } = useTranslation()
 
     const navigation = [
       { name: t('header:menu_home'), href: '/' },
       { name: t('header:menu_philosophy'), href: '/filosofia' },
-      { name: t('header:menu_projects'), href: '/projects' },
+      { name: t('header:menu_projects'), href: '/proyectos' },
       { name: t('header:menu_services'), href: '/services' },
       { name: t('header:menu_contact'), href: '/contacto' },
     ]
@@ -27,14 +27,14 @@ const NavBar = ({primary}) => {
     }
 
   return (
-    <header className="absolute inset-x-0 top-0 z-50 bg-white">
+    <header className={transparent ? "absolute inset-x-0 top-0 z-50 bg-transparent" : "absolute inset-x-0 top-0 z-50 bg-white"} >
         <nav className="flex items-center justify-between p-6 lg:px-8" aria-label="Global">
           <div className="flex lg:flex-1">
             <a href="#" className="-m-1.5 p-0">
               <div className="h-20">
               <img
                 className= {primary ? "lg:hidden h-20 w-auto" : "h-20 w-auto"}
-                src="/assets/images/homepage/logonegro.png"
+                src={transparent ? "/assets/images/homepage/logoblanco.png" : "/assets/images/homepage/logonegro.png"}
                 alt=""
                 onClick = {() => router.push('/')}
               />
@@ -44,7 +44,7 @@ const NavBar = ({primary}) => {
           <div className="flex ">
             <button
               type="button"
-              className="-m-2.5 inline-flex items-center justify-center rounded-md p-2.5 text-black focus:outline-none" 
+              className={transparent ? "-m-2.5 inline-flex items-center justify-center rounded-md p-2.5 text-white" : "-m-2.5 inline-flex items-center justify-center rounded-md p-2.5 text-black"}
               onClick={() => setMobileMenuOpen(true)}
             >
               <Bars3Icon className="h-6 w-6 focus:outline-none" aria-hidden="true" />

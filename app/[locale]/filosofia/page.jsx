@@ -4,7 +4,7 @@ import TranslationsProvider from '@/components/TranslationsProvider'
 import NavBar from '@/components/NavBar/NavBar'
 import LanguageSwitcher from '@/components/LanguageSwitcher/LanguageSwitcher'
 import ArrowBack from '@/components/ArrowBack/ArrowBack'
-import { useRouter } from "next/navigation"
+import Footer from '@/components/Footer/Footer'
 
 const namespaces = ['filosofia', 'header']
 export default async function Filosofia({ params: { locale }}) {
@@ -57,6 +57,7 @@ export default async function Filosofia({ params: { locale }}) {
             </div>
             <LanguageSwitcher />
         </main>
+        <Footer />
         </TranslationsProvider>
     )
 }

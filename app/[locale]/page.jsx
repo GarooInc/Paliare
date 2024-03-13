@@ -5,6 +5,7 @@ import NavBar from '@/components/NavBar/NavBar'
 import LanguageSwitcher from '@/components/LanguageSwitcher/LanguageSwitcher'
 import { IoIosArrowRoundDown } from "react-icons/io"
 import Carousel from '@/components/Carousel/Carousel'
+import Footer from '@/components/Footer/Footer'
 
 const namespaces = ['homepage', 'header']
 export default async function Home({ params: { locale }}) {
@@ -79,6 +80,7 @@ export default async function Home({ params: { locale }}) {
                 </h1>
             </section>
             <LanguageSwitcher />
+            <Footer />
         </main>
         </TranslationsProvider>
     )

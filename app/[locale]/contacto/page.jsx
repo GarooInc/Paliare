@@ -3,7 +3,7 @@ import initTranslations from '@/app/i18n'
 import TranslationsProvider from '@/components/TranslationsProvider'
 import NavBar from '@/components/NavBar/NavBar'
 import LanguageSwitcher from '@/components/LanguageSwitcher/LanguageSwitcher'
-import Footer from '@/components/Footer/page'
+import Footer from '@/components/Footer/Footer'
 
 const namespaces = ['Contacto', 'header']
 
@@ -33,6 +33,7 @@ export default async function Contacto({ params: { locale }}) {
             </div>
             <LanguageSwitcher />
         </main>
+        <Footer />
         </TranslationsProvider>
     )
 }
