@@ -16,19 +16,22 @@ export default async function Home({ params: { locale }}) {
             src: '/assets/images/homepage/casa3.jpg',
             alt: 'casa1',
             title : t('homepage_section_2_slide_1_title'),
-            desc : t('homepage_section_2_slide_1_text')
+            desc : t('homepage_section_2_slide_1_text'),
+            path : '/proyectos'
         },
         {
             src: '/assets/images/homepage/casa1.jpg',
             alt: 'casa2',
             title : t('homepage_section_2_slide_2_title'),
-            desc : t('homepage_section_2_slide_2_text')
+            desc : t('homepage_section_2_slide_2_text'),
+            path : '/interiorismo'
         },
         {
             src: '/assets/images/homepage/casa2.jpg',
             alt: 'casa3',
             title : t('homepage_section_2_slide_3_title'),
-            desc : t('homepage_section_2_slide_3_text')
+            desc : t('homepage_section_2_slide_3_text'),
+            path : '/construccion'
         }
 
     ]

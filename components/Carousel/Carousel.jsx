@@ -2,10 +2,13 @@
 import React from 'react'
 import { IoIosArrowRoundForward } from "react-icons/io"
 import { useTranslation } from 'react-i18next'
+import { useRouter } from "next/navigation"
+
 
 
 const Carousel = ({images}) => {
     const { t } = useTranslation()
+    const router = useRouter()
   return (
     <div className="carousel w-full">
         {
@@ -19,13 +22,13 @@ const Carousel = ({images}) => {
                       <h1 className="absolute top-1/2 left-20 text-white text-6xl font-regular mont uppercase m-0">{image.title}</h1>
                       <div className="absolute bottom-20 right-20 text-white text-2xl font-light mont w-1/3 flex flex-col">
                         <span className="text-white text-lg  mont font-medium">{image.desc}</span>
-                        <a href='/' className="text-white text-lg font-medium underline mont"> {t('homepage_section_2_slides_more') }</a>
+                        <button className="text-start text-white text-lg font-medium underline mont" onClick={() => router.push(image.path)}> {t('homepage_section_2_slides_more') }</button>
                       </div>
                     </div>
                     <div className='lg:hidden absolute top-1/2'>
                       <div className='flex_center gap-4'>
                         <h1 className="text-white text-4xl font-regular mont uppercase m-0">{image.title}</h1>
-                        <a href='/' className="text-white text-lg font-medium underline mont"> {t('homepage_section_2_slides_more') }</a>
+                        <button className="text-start text-white text-lg font-medium underline mont" onClick={() => router.push(image.path)}> {t('homepage_section_2_slides_more') }</button>
                       </div>
                     </div>
                 </div>

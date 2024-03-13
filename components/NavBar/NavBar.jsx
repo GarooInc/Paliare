@@ -7,14 +7,14 @@ import { useTranslation } from 'react-i18next'
 
 
 
-const NavBar = ({primary, transparent}) => {
+const NavBar = ({primary, transparent, black}) => {
     const { t } = useTranslation()
 
     const navigation = [
       { name: t('header:menu_home'), href: '/' },
       { name: t('header:menu_philosophy'), href: '/filosofia' },
       { name: t('header:menu_projects'), href: '/proyectos' },
-      { name: t('header:menu_services'), href: '/services' },
+      { name: t('header:menu_services'), href: '/servicios' },
       { name: t('header:menu_contact'), href: '/contacto' },
     ]
 
@@ -37,6 +37,7 @@ const NavBar = ({primary, transparent}) => {
                 src={transparent ? "/assets/images/homepage/logoblanco.png" : "/assets/images/homepage/logonegro.png"}
                 alt=""
                 onClick = {() => router.push('/')}
+                style={black ? {filter: 'invert(1)'} : {filter: 'invert(0)'}}
               />
               </div>
             </a>
@@ -44,8 +45,10 @@ const NavBar = ({primary, transparent}) => {
           <div className="flex ">
             <button
               type="button"
-              className={transparent ? "-m-2.5 inline-flex items-center justify-center rounded-md p-2.5 text-white" : "-m-2.5 inline-flex items-center justify-center rounded-md p-2.5 text-black"}
+              className={transparent ? "-m-2.5 inline-flex items-center justify-center rounded-md p-2.5 text-white" : 
+              "-m-2.5 inline-flex items-center justify-center rounded-md p-2.5 text-black"}
               onClick={() => setMobileMenuOpen(true)}
+              style={black ? {filter: 'invert(1)'} : {filter: 'invert(0)'}}
             >
               <Bars3Icon className="h-6 w-6 focus:outline-none" aria-hidden="true" />
             </button>

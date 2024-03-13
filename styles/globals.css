@@ -45,6 +45,10 @@
   @apply text-center lg:w-1/4 lg:text-4xl text-2xl font-bold font-anton uppercase;
 }
 
+.tittle_anton{
+  @apply  lg:w-1/2 lg:text-4xl text-2xl font-bold font-anton uppercase;
+}
+
 .tittle_v2{
   @apply text-center text-2xl tracking-wider font-montserrat uppercase;
 }
@@ -54,7 +58,7 @@
 }
 
 .subtitle_mid{
-  @apply text-lg font-montserrat;
+  @apply lg:text-lg text-sm font-montserrat;
 }
 
 .mont{
@@ -73,8 +77,12 @@
   @apply list-disc subtitle_mid text-lg  font-medium text-start text-black;
 }
 
+.gridFlex{
+  @apply flex flex-col gap-4 py-10;
+}
+
 
 /* contact */
 .input_contact{
-  @apply w-full h-12 border-2 border-white rounded-md px-4 bg-transparent text-white mont focus:outline-none;
+  @apply w-full h-12 border-2 border-white  px-4 bg-transparent text-white mont focus:outline-none;
 }
