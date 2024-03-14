@@ -37,7 +37,7 @@ export default async function Servicios({ params: { locale }}) {
         <TranslationsProvider locale={locale} namespaces={namespaces} resources={resources}>
             <section className="flex min-h-screen w-full flex-col lg:pt-20 bg-lightergray">
                 <NavBar transparent black/>
-                <div className="normal_section py-28  gap-2 ">
+                <div className="normal_section lg:py-28 pt-40 pb-20  gap-2 ">
                     <h1 className="tittle_anton text-center text-black">{t('services_title')}</h1>
                     <span className="subtitle_mid lg:w-1/3 text-center text-black">{t('services_subtitle')}</span>
                     <img src="/assets/images/servicios/moodboard.png" alt="servicios1" className="w-full lg:h-[600px] object-contain" />
