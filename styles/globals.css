@@ -81,6 +81,10 @@
   @apply flex flex-col gap-4 py-10;
 }
 
+.timeline-vertical > li > hr {
+  width: 2px !important;
+}
+
 
 /* contact */
 .input_contact{
