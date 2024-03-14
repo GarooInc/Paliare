@@ -123,7 +123,7 @@ export default async function Servicios({ params: { locale }}) {
                             <img src="/assets/images/servicios/1.jpg" alt="servicios7" className="lg:w-[400px] lg:h-[400px] h-[200px] object-cover" />
                         </div>
                         <div className="timeline-end flex flex-col justify-start items-start lg:p-4 pl-4">
-                            <h1 className="lg:tittle_v2 text-xl font-bold text-black">{t('services_process_title_1')}</h1>
+                            <h1 className="mont text-xl font-bold text-black">{t('services_process_title_1')}</h1>
                             <span className="subtitle_mid text-black text-start">{t('services_process_text_1')}</span>
                         </div>
                         <hr className="bg-black"/>
@@ -136,7 +136,7 @@ export default async function Servicios({ params: { locale }}) {
                             </svg>
                         </div>
                         <div className="timeline-start flex flex-col justify-start items-end lg:p-4 pr-4 py-4">
-                            <h1 className="lg:tittle_v2 text-xl  font-bold text-black text-end">{t('services_process_title_2')}</h1>
+                            <h1 className="mont text-xl  font-bold text-black text-end">{t('services_process_title_2')}</h1>
                             <span className="subtitle_mid text-black text-end">{t('services_process_text_2')}</span>
                         </div>
                         <div className="timeline-end lg:px-4 pl-4">
@@ -155,7 +155,7 @@ export default async function Servicios({ params: { locale }}) {
                             </svg>
                         </div>
                         <div className="timeline-end flex flex-col justify-start items-start lg:p-4 pl-4 py-4">
-                            <h1 className="lg:tittle_v2 text-xl  font-bold text-black">{t('services_process_title_3')}</h1>
+                            <h1 className="mont text-xl  font-bold text-black">{t('services_process_title_3')}</h1>
                             <span className="subtitle_mid text-black text-start">{t('services_process_text_3')}</span>
                         </div>
                     </li>
