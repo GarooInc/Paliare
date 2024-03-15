@@ -82,7 +82,7 @@ export default async function Home({ params: { locale }}) {
                     </div>
                 </h1>
             </section>
-            <section className="normal_section bg-white py-10 min-h-screen lg:pb-0 lg:pt-20">
+            <section className="normal_section bg-white py-20 min-h-screen lg:pb-0">
                     <div className='flex justify-end items-center relative z-30'>
                         <img src="/assets/images/homepage/hormigas.png" alt="" className="w-2/3" />
                         <span className="tittle_v3 text-start text-black absolute left-0 lg:top-20 top-10 lg:w-full w-2/3">{t('homepage_section_4_title')}</span>
