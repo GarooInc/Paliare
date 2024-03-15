@@ -100,7 +100,7 @@ export default async function Home({ params: { locale }}) {
                         </div> 
                     </div>
             </section>
-            <section className="normal_section bg-white py-20 lg:py-10 min-h-screen">
+            <section className="normal_section bg-white py-10 ">
                     <svg width="1" height="194" viewBox="0 0 1 194" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <line x1="0.5" y1="-2.18557e-08" x2="0.500008" y2="194" stroke="black"/>
                     </svg>
