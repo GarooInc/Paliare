@@ -82,7 +82,7 @@ export default async function Home({ params: { locale }}) {
                     </div>
                 </h1>
             </section>
-            <section className="normal_section bg-white py-20 min-h-screen">
+            <section className="normal_section bg-white py-10 min-h-screen lg:pb-0 lg:pt-20">
                     <div className='flex justify-end items-center relative z-30'>
                         <img src="/assets/images/homepage/hormigas.png" alt="" className="w-2/3" />
                         <span className="tittle_v3 text-start text-black absolute left-0 lg:top-20 top-10 lg:w-full w-2/3">{t('homepage_section_4_title')}</span>
@@ -91,7 +91,7 @@ export default async function Home({ params: { locale }}) {
                         <div className='border-2 border-black lg:w-1/3  w-2/3 p-8 lg:p-20 flex justify-center items-center absolute left-0 lg:left-40 lg:-top-8 -top-4 z-10'>
                             <span className='subtitle_mid text-black'>{t('homepage_section_4_subtitle')}</span>
                         </div>
-                        <div className='flex flex-col gap-4 lg:w-1/2 absolute lg:-right-4 lg:top-4 top-64'>
+                        <div className='flex flex-col gap-4 lg:w-1/2 absolute lg:-right-4 lg:top-20 top-64'>
                                 <span className='subtitle_mid text-black pt-2'>
                                     {t('homepage_section_4_text_1')}
                                     {t('homepage_section_4_text_2')}
@@ -100,7 +100,7 @@ export default async function Home({ params: { locale }}) {
                         </div> 
                     </div>
             </section>
-            <section className="normal_section bg-white py-10 ">
+            <section className="normal_section bg-white py-10 lg:pt-0 ">
                     <svg width="1" height="194" viewBox="0 0 1 194" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <line x1="0.5" y1="-2.18557e-08" x2="0.500008" y2="194" stroke="black"/>
                     </svg>
