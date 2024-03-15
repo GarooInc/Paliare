@@ -126,7 +126,7 @@ export default async function Home({ params: { locale }}) {
             </section>
             <section className=" bg-white h-[600px] lg:flex relative hidden">
                 <div className='bg-darkgray lg:w-1/2 h-full flex_center lg:p-40 p-20'>
-                    <span className='subtitle text-white text-end'>{t('homepage_section_5_text_1')}</span>
+                    <span className='subtitle_mid text-white text-end'>{t('homepage_section_5_text_1')}</span>
                 </div>
                 <img src="/assets/images/homepage/patricia.png" alt="" className="absolute left-1/2 top-1/4 lg:w-[200px] w-[150px] transform -translate-x-1/2" />
                 <div className='lg:w-1/2 h-full flex flex-col justify-center items-center'>
@@ -140,7 +140,7 @@ export default async function Home({ params: { locale }}) {
                     <img src="/assets/images/homepage/logopatricia.png" alt="" className="w-1/2 absolute -bottom-4" />
                 </div>
                 <div className='bg-darkgray w-full flex flex-col gap-4 items-center justify-center p-20 '>
-                    <span className='subtitle_mid text-white'>{t('homepage_section_5_text_1')}</span>
+                    <span className='subtitle_mid text-white text-center'>{t('homepage_section_5_text_1')}</span>
                     <a href="/contacto" className="text-white subtitle_mid underline font-medium">{t('homepage_section_5_text_3')}</a>
                 </div>
             </section>
