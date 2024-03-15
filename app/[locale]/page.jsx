@@ -82,6 +82,69 @@ export default async function Home({ params: { locale }}) {
                     </div>
                 </h1>
             </section>
+            <section className="normal_section bg-white py-20 min-h-screen">
+                    <div className='flex justify-end items-center relative z-30'>
+                        <img src="/assets/images/homepage/hormigas.png" alt="" className="w-2/3" />
+                        <span className="tittle_v3 text-start text-black absolute left-0 lg:top-20 top-10 lg:w-full w-2/3">{t('homepage_section_4_title')}</span>
+                    </div>
+                    <div className='flex_center_v2 gap-4 relative w-full'>
+                        <div className='border-2 border-black lg:w-1/3  w-2/3 p-8 lg:p-20 flex justify-center items-center absolute left-0 lg:left-40 lg:-top-8 -top-4 z-10'>
+                            <span className='subtitle_mid text-black'>{t('homepage_section_4_subtitle')}</span>
+                        </div>
+                        <div className='flex flex-col gap-4 lg:w-1/2 absolute lg:-right-4 lg:top-4 top-64'>
+                                <span className='subtitle_mid text-black pt-2'>
+                                    {t('homepage_section_4_text_1')}
+                                    {t('homepage_section_4_text_2')}
+                                </span>
+                                <a  href="/contacto" className="text-black subtitle_mid underline font-medium">{t('homepage_section_4_kwnowmore')}</a>
+                        </div> 
+                    </div>
+            </section>
+            <section className="normal_section bg-white py-20 lg:py-10 min-h-screen">
+                    <svg width="1" height="194" viewBox="0 0 1 194" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <line x1="0.5" y1="-2.18557e-08" x2="0.500008" y2="194" stroke="black"/>
+                    </svg>
+                    <div className='relative flex flex-col'>
+                        <div className='relative flex lg:justify-center justify-start items-center'>
+                            <h1 className="w-1/2 lg:text-4xl text-2xl font-bold font-anton uppercase text-black z-20">{t('homepage_section_5_title')}</h1>
+                            <div className='bg-lightergray lg:w-1/2 w-3/4 flex_center_v2 gap-4 lg:p-20 p-10 absolute right-0 lg:top-20 top-24 z-10'>
+                                <span className='subtitle_mid text-black'>{t('homepage_section_5_subtitle')}</span>
+                                <img src="/assets/images/homepage/logoCIDI.png" alt="" className="absolute right-4 -top-4 w-1/4" />
+                            </div>
+                        </div>
+                        <div className='lg:flex justify-center lg:pt-20 z-20 hidden'>
+                            <svg width="1" height="194" viewBox="0 0 1 194" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <line x1="0.5" y1="-2.18557e-08" x2="0.500008" y2="194" stroke="black"/>
+                            </svg>
+                        </div>
+                    </div>
+                    <div className='flex justify-center pt-60 lg:hidden'>
+                        <svg width="1" height="194" viewBox="0 0 1 194" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <line x1="0.5" y1="-2.18557e-08" x2="0.500008" y2="194" stroke="black"/>
+                        </svg>
+                    </div>
+            </section>
+            <section className=" bg-white h-[600px] lg:flex relative hidden">
+                <div className='bg-darkgray lg:w-1/2 h-full flex_center lg:p-40 p-20'>
+                    <span className='subtitle text-white text-end'>{t('homepage_section_5_text_1')}</span>
+                </div>
+                <img src="/assets/images/homepage/patricia.png" alt="" className="absolute left-1/2 top-1/4 lg:w-[200px] w-[150px] transform -translate-x-1/2" />
+                <div className='lg:w-1/2 h-full flex flex-col justify-center items-center'>
+                    <img src="/assets/images/homepage/logopatricia.png" alt="" className="w-1/2" />
+                    <a href="/contacto" className="text-black subtitle_mid underline font-medium">{t('homepage_section_5_text_3')}</a>
+                </div>
+            </section>
+            <section className="bg-white flex flex-col relative lg:hidden pt-40">
+                <div className='flex flex-col justify-center items-center absolute -top-8 w-full'>
+                    <img src="/assets/images/homepage/patricia.png" alt="" className="w-[150px] mx-auto lg:absolute lg:left-1/2 lg:top-1/4 lg:w-[200px] lg:transform lg:-translate-x-1/2" />
+                    <img src="/assets/images/homepage/logopatricia.png" alt="" className="w-1/2 absolute -bottom-4" />
+                </div>
+                <div className='bg-darkgray w-full flex flex-col gap-4 items-center justify-center p-20 '>
+                    <span className='subtitle_mid text-white'>{t('homepage_section_5_text_1')}</span>
+                    <a href="/contacto" className="text-white subtitle_mid underline font-medium">{t('homepage_section_5_text_3')}</a>
+                </div>
+            </section>
+
             <LanguageSwitcher />
             <Footer />
         </main>
