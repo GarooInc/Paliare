@@ -53,12 +53,16 @@
   @apply text-center text-2xl tracking-wider font-montserrat uppercase;
 }
 
+.tittle_v3{
+  @apply text-2xl tracking-wider font-montserrat uppercase;
+}
+
 .subtitle{
   @apply text-xl font-montserrat  text-center;
 }
 
 .subtitle_mid{
-  @apply lg:text-lg text-sm font-montserrat;
+  @apply text-lg font-montserrat;
 }
 
 .mont{
@@ -67,6 +71,10 @@
 
 .flex_center{
   @apply flex items-center justify-center lg:flex-row flex-col ;
+}
+
+.flex_center_v2{
+  @apply flex lg:flex-row flex-col ;
 }
 
 .anton{
