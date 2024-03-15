@@ -96,7 +96,7 @@ export default async function Home({ params: { locale }}) {
                                     {t('homepage_section_4_text_1')}
                                     {t('homepage_section_4_text_2')}
                                 </span>
-                                <a  href="/contacto" className="text-black subtitle_mid underline font-medium">{t('homepage_section_4_kwnowmore')}</a>
+                                <a  href="/filosofia" className="text-black subtitle_mid underline font-medium">{t('homepage_section_4_kwnowmore')}</a>
                         </div> 
                     </div>
             </section>
