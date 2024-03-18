@@ -88,8 +88,8 @@ export default async function Home({ params: { locale }}) {
                         <span className="tittle_v3 text-start text-black absolute left-0 lg:top-20 top-10 lg:w-full w-2/3">{t('homepage_section_4_title')}</span>
                     </div>
                     <div className='flex_center_v2 gap-4 relative w-full'>
-                        <div className='border-2 border-black lg:w-1/3  w-2/3 p-8 xl:p-20 flex justify-center items-center absolute left-0 lg:left-40 lg:-top-8 -top-4 z-10'>
-                            <span className='small_subtitle text-black'>{t('homepage_section_4_subtitle')}</span>
+                        <div className='border-2 border-black lg:w-1/3  w-4/5 p-6 xl:p-20 flex justify-center items-center absolute left-0 lg:left-40 lg:-top-8 -top-4 z-10'>
+                            <span className='subtitle_mid text-black'>{t('homepage_section_4_subtitle')}</span>
                         </div>
                         <div className='flex flex-col gap-4 lg:w-1/2 absolute xl:-right-4 lg:top-20 top-[220px] lg:-right-8'>
                                 <span className='subtitle_mid text-black'>
