@@ -60,7 +60,7 @@ const Form = () => {
                     <textarea className=" input_contact" placeholder={t('contact_form_message')} name="message"
                               onChange={(e) => setForm({...form, message: e.target.value})}></textarea>
                     <button
-                        className="text-white mont btn border-2 border-white w-full mt-10 hover:bg-white hover:text-black rounded-none"
+                        className="btn_contact"
                         onClick={handleSubmit}>{t('contact_form_send')}</button>
                 </div>
             </form>

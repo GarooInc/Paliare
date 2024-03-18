@@ -5,6 +5,7 @@ import NavBar from '@/components/NavBar/NavBar'
 import Footer from '@/components/Footer/Footer'
 import LanguageSwitcher from '@/components/LanguageSwitcher/LanguageSwitcher'
 import ImageBanner from '@/components/ImageBanner/ImageBanner'
+import QuotePopUp from '@/components/QuotePopUp/QuotePopUp'
 
 
 const namespaces = ['Interiorismo', 'header', 'Cotizador']
@@ -30,7 +31,7 @@ export default async function Interiorismo({ params: { locale }}) {
                         <img src="/assets/images/interiorismo/5.jpg" alt="interiorismo4" className="w-1/2 lg:h-[300px] h-[200px] object-cover" loading='lazy'/>
                     </div>
                 </div>
-                <button className='link_text pb-10'>{t('Cotizador:link_popup')}</button>
+                <QuotePopUp />
             </div>
             <LanguageSwitcher />
         </div>

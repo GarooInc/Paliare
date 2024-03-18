@@ -5,6 +5,7 @@ import NavBar from '@/components/NavBar/NavBar'
 import Footer from '@/components/Footer/Footer'
 import LanguageSwitcher from '@/components/LanguageSwitcher/LanguageSwitcher'
 import ImageBanner from '@/components/ImageBanner/ImageBanner'
+import QuotePopUp from '@/components/QuotePopUp/QuotePopUp'
 
 
 const namespaces = ['Construccion', 'header', 'Cotizador']
@@ -25,7 +26,7 @@ export default async function Construccion({ params: { locale }}) {
                     <img src="/assets/images/construccion/3.jpg" alt="construccion3" className="w-full lg:h-[400px] h-[200px] object-cover" loading='lazy' />
                     <img src="/assets/images/construccion/4.png" alt="construccion4" className="w-full lg:h-[400px] h-[200px] object-cover" loading='lazy' />
                 </div>
-                <button className='link_text pb-10'>{t('Cotizador:link_popup')}</button>
+                <QuotePopUp />
             </div>
             <LanguageSwitcher />
         </div>

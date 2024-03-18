@@ -6,6 +6,7 @@ import Footer from '@/components/Footer/Footer'
 import LanguageSwitcher from '@/components/LanguageSwitcher/LanguageSwitcher'
 import ImageBanner from '@/components/ImageBanner/ImageBanner'
 import Image from 'next/image'
+import QuotePopUp from '@/components/QuotePopUp/QuotePopUp'
 
 const namespaces = ['arquitectura', 'header', 'Cotizador']
 
@@ -29,7 +30,7 @@ export default async function Proyectos({ params: { locale }}) {
                         <Image src={"/assets/images/arquitectura/1.jpg"} alt="arquitectura5" width={600} height={600} className="w-1/2 lg:h-[620px] h-[320px] object-cover" loading='lazy'/>
                     </div>
                 </div>
-                <button className='link_text pb-10'>{t('Cotizador:link_popup')}</button>
+                <QuotePopUp />
             </div>
             <LanguageSwitcher />
         </div>

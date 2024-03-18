@@ -100,5 +100,13 @@
 
 /* contact */
 .input_contact{
-  @apply w-full h-12 border-2 border-white  px-4 bg-transparent text-white mont focus:outline-none;
+  @apply w-full h-12 border-2 border-white px-4 bg-transparent text-white mont focus:outline-none rounded-none;
+}
+
+.input_contactv2{
+  @apply w-full h-12 border-2 border-black px-4 bg-transparent text-black mont focus:outline-none rounded-none;
+}
+
+.btn_contact{
+  @apply text-white mont btn border-2 border-white w-full mt-10 hover:bg-white hover:text-black rounded-none;
 }
