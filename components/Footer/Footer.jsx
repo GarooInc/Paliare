@@ -22,7 +22,7 @@ const Footer = () => {
         <aside className="items-center grid-flow-col xs:hidden lg:block">
             {
                 navigation.map((item, index) => (
-                    <button key={index} className="text-darkgray mont" onClick={() => router.push(item.href)}>
+                    <button key={index} className="text-darkgray mont lg:text-md xs:text-xs" onClick={() => router.push(item.href)}>
                         {item.name} 
                         {index+1 !== navigation.length && <span className="mx-2">•</span>}
                     </button>
