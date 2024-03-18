@@ -14,8 +14,7 @@ const Form = () => {
         message: ''
     })
 
-    console.log("hook", hook)
-    console.log("form", form)
+    const [popupMessage, setPopupMessage] = useState({ show: false, message: '', success: false });
 
 
     const handleSubmit = async (e) => {
@@ -36,9 +35,16 @@ const Form = () => {
                 },
                 body: JSON.stringify(form)
             })
-            console.log('Success:', response)
+            if (response.ok) {
+                setPopupMessage({ show: true, message: t('contact_success_message'), success: true });
+                setTimeout(() => {
+                    setPopupMessage({ show: false, message: '', success: false });
+                }, 10000);
+            } else {
+                setPopupMessage({ show: true, message: t('contact_error_message'), success: false });
+            }
         } catch (error) {
-            console.error('Error:', error)
+            setPopupMessage({ show: true, message: t('contact_error_message'), success: false });
         }
     }
 
@@ -62,6 +68,14 @@ const Form = () => {
                     <button
                         className="btn_contact"
                         onClick={handleSubmit}>{t('contact_form_send')}</button>
+                    {
+                        popupMessage.show && (
+                            <div
+                                className={`flex justify-center items-center w-full h-12 ${popupMessage.success ? 'bg-green-500' : 'bg-red-500'} text-white`}>
+                                <span>{popupMessage.message}</span>
+                            </div>
+                        )
+                    }
                 </div>
             </form>
             <div className="flex flex-col w-full py-10 gap-4 normal_section">
