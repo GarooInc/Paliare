@@ -106,10 +106,10 @@ export default async function Home({ params: { locale }}) {
                     </svg>
                     <div className='relative flex flex-col'>
                         <div className='relative flex lg:justify-center justify-start items-center'>
-                            <h1 className="w-1/2 lg:text-4xl text-2xl font-bold font-anton uppercase text-black z-20">{t('homepage_section_5_title')}</h1>
-                            <div className='bg-lightergray lg:w-1/2 w-3/4 flex_center_v2 gap-4 lg:p-20 p-10 absolute right-0 lg:top-20 top-24 z-10'>
+                            <h1 className="w-1/2 lg:w-1/3 lg:text-5xl text-2xl font-bold font-anton uppercase text-black z-20">{t('homepage_section_5_title')}</h1>
+                            <div className='bg-lightergray lg:w-1/2 w-3/4 flex_center_v2 gap-4 lg:p-20 p-10 absolute right-0 lg:top-28 top-24 z-10'>
                                 <span className='subtitle_mid text-black'>{t('homepage_section_5_subtitle')}</span>
-                                <img src="/assets/images/homepage/logoCIDI.png" alt="" className="absolute right-4 -top-4 w-1/4" />
+                                <img src="/assets/images/homepage/logoCIDI.png" alt="" className="absolute right-4 -top-4 w-1/4 lg:-top-20" />
                             </div>
                         </div>
                         <div className='lg:flex justify-center lg:pt-20 z-20 hidden'>
