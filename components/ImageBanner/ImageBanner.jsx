@@ -25,7 +25,7 @@ const ImageBanner = ({image, right, left, navRight, navLeft, text, logo}) => {
             />
         }
         {
-          text && <span className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 tittle_v2 text-white font-bold">{text}</span>
+          text && <span className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 tittle_v2 text-white font-bold ">{text}</span>
 
         }
         {
