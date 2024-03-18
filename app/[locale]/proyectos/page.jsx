@@ -19,7 +19,7 @@ export default async function Proyectos({ params: { locale }}) {
         <div className='flex flex-col w-full bg-white'>
             <ImageBanner image="/assets/images/arquitectura/portada.jpg" right navRight="/interiorismo" text={t('design_title')} />
             <div className="flex w-full bg-white flex-col normal_section">
-                <span className="lg:w-2/3 subtitle_mid text-black text-center pt-10">{t('design_text1')}</span>
+                <span className="lg:w-2/3 subtitle_mid text-black text-center pt-10 lg:pt-20 lg:pb-10">{t('design_text1')}</span>
                 <div className="gridFlex">
                     <img src="/assets/images/arquitectura/2.jpg" alt="arquitectura1" className="w-full lg:h-[500px] h-[300px] object-cover" loading='lazy'/>
                     <div className="flex flex-row gap-4">
