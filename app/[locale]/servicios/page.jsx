@@ -88,18 +88,18 @@ export default async function Servicios({ params: { locale }}) {
                     </div>
                 </div>
                 <div className='normal_section py-4 bg-white'>
-                    <h1 className="subtitle font-medium text-center text-black">{t('services_section_2_title')}</h1>
+                    <h1 className="subtitle font-medium text-center tracking-widest uppercase text-black">{t('services_section_2_title')}</h1>
                 </div>
                 <div className='grid lg:grid-cols-4 lg:grid-rows-1 grid-cols-2 grid-rows-2'>
                     {
                         gridContent.map((content, index) => (
                             <div key={index} className='flex flex-col gap-4 justify-between relative'>
                                 <img src={content.img} alt={`servicios${index}`} className="lg:h-[600px] h-[300px] object-cover brightness-50" />
-                                <div className='flex absolute lg:bottom-2 bottom-8 p-2 lg:w-4/5 justify-start items-start h-1/4'>
+                                <div className='flex absolute lg:bottom-2 bottom-8 p-2 lg:w-[250px] lg:pl-10 justify-start items-start h-1/4'>
                                     <span 
-                                    className={index % 2 === 0 ? "mont text-white uppercase font-bold lg:text-lg text-sm" : "mont text-white uppercase font-light lg:text-lg text-sm"} >
+                                    className={index % 2 === 0 ? "mont text-white uppercase font-bold lg:text-md text-sm leading-6" : "mont text-white uppercase font-light lg:text-md text-sm leading-6"} >
                                         {content.boldText}
-                                        <span className={index % 2 === 0 ? "mont text-white uppercase font-light mx-2 lg:text-lg text-sm" : "mont text-white uppercase font-bold mx-2 lg:text-lg text-sm"}>
+                                        <span className={index % 2 === 0 ? "mont text-white uppercase font-light mx-2 lg:text-md text-sm leading-6" : "mont text-white uppercase font-bold mx-2 lg:text-md text-sm leading-6"}>
                                             {content.text}
                                         </span>
                                     </span>
@@ -109,7 +109,7 @@ export default async function Servicios({ params: { locale }}) {
                     }
                 </div>
                 <div className='normal_section py-10 bg-white'>
-                    <h1 className="tittle_v2 font-bold text-black py-10">{t('services_process_header')}</h1>
+                    <h1 className="tittle_v2 font-bold text-black py-10 tracking-widest">{t('services_process_header')}</h1>
                     <ul className="timeline timeline-vertical">
                     <li>
                     <hr className="bg-black"/>
@@ -123,7 +123,7 @@ export default async function Servicios({ params: { locale }}) {
                             <img src="/assets/images/servicios/1.jpg" alt="servicios7" className="lg:w-[400px] lg:h-[400px] h-[200px] object-cover" />
                         </div>
                         <div className="timeline-end flex flex-col justify-start items-start lg:p-4 pl-4">
-                            <h1 className="mont text-xl font-bold text-black">{t('services_process_title_1')}</h1>
+                            <h1 className="anton text-xl lg:text-3xl text-black uppercase">{t('services_process_title_1')}</h1>
                             <span className="subtitle_mid text-black text-start">{t('services_process_text_1')}</span>
                         </div>
                         <hr className="bg-black"/>
@@ -136,7 +136,7 @@ export default async function Servicios({ params: { locale }}) {
                             </svg>
                         </div>
                         <div className="timeline-start flex flex-col justify-start items-end lg:p-4 pr-4 py-4">
-                            <h1 className="mont text-xl  font-bold text-black text-end">{t('services_process_title_2')}</h1>
+                            <h1 className="anton text-xl lg:text-3xl text-black text-end uppercase">{t('services_process_title_2')}</h1>
                             <span className="subtitle_mid text-black text-end">{t('services_process_text_2')}</span>
                         </div>
                         <div className="timeline-end lg:px-4 pl-4">
@@ -155,7 +155,7 @@ export default async function Servicios({ params: { locale }}) {
                             </svg>
                         </div>
                         <div className="timeline-end flex flex-col justify-start items-start lg:p-4 pl-4 py-4">
-                            <h1 className="mont text-xl  font-bold text-black">{t('services_process_title_3')}</h1>
+                            <h1 className="anton text-xl lg:text-3xl text-black uppercase">{t('services_process_title_3')}</h1>
                             <span className="subtitle_mid text-black text-start">{t('services_process_text_3')}</span>
                         </div>
                     </li>
