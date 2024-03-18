@@ -7,7 +7,7 @@ import LanguageSwitcher from '@/components/LanguageSwitcher/LanguageSwitcher'
 import ImageBanner from '@/components/ImageBanner/ImageBanner'
 
 
-const namespaces = ['Interiorismo', 'header']
+const namespaces = ['Interiorismo', 'header', 'Cotizador']
 
 export default async function Interiorismo({ params: { locale }}) {
     const { t, resources } = await initTranslations(locale, namespaces)
@@ -30,6 +30,7 @@ export default async function Interiorismo({ params: { locale }}) {
                         <img src="/assets/images/interiorismo/5.jpg" alt="interiorismo4" className="w-1/2 lg:h-[300px] h-[200px] object-cover" loading='lazy'/>
                     </div>
                 </div>
+                <button className='link_text pb-10'>{t('Cotizador:link_popup')}</button>
             </div>
             <LanguageSwitcher />
         </div>

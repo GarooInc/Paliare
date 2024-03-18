@@ -93,6 +93,10 @@
   width: 2px !important;
 }
 
+.link_text{
+  @apply text-lg font-montserrat underline text-black font-medium;
+}
+
 
 /* contact */
 .input_contact{

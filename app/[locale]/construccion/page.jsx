@@ -7,7 +7,7 @@ import LanguageSwitcher from '@/components/LanguageSwitcher/LanguageSwitcher'
 import ImageBanner from '@/components/ImageBanner/ImageBanner'
 
 
-const namespaces = ['Construccion', 'header']
+const namespaces = ['Construccion', 'header', 'Cotizador']
 
 export default async function Construccion({ params: { locale }}) {
     const { t, resources } = await initTranslations(locale, namespaces)
@@ -22,9 +22,10 @@ export default async function Construccion({ params: { locale }}) {
                 <div className="grid grid-cols-2 grid-rows-2 gap-4 py-10">
                     <img src="/assets/images/construccion/1.jpg" alt="construccion1" className="w-full lg:h-[400px] h-[300px] object-cover" loading='lazy' />
                     <img src="/assets/images/construccion/2.png" alt="construccion2" className="w-full lg:h-[400px] h-[300px] object-cover" loading='lazy' />
-                    <img src="/assets/images/construccion/3.jpg" alt="construccion3" className="w-full lg:h-[300px] h-[200px] object-cover" loading='lazy' />
-                    <img src="/assets/images/construccion/4.png" alt="construccion4" className="w-full lg:h-[300px] h-[200px] object-cover" loading='lazy' />
+                    <img src="/assets/images/construccion/3.jpg" alt="construccion3" className="w-full lg:h-[400px] h-[200px] object-cover" loading='lazy' />
+                    <img src="/assets/images/construccion/4.png" alt="construccion4" className="w-full lg:h-[400px] h-[200px] object-cover" loading='lazy' />
                 </div>
+                <button className='link_text pb-10'>{t('Cotizador:link_popup')}</button>
             </div>
             <LanguageSwitcher />
         </div>
