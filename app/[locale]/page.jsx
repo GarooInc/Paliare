@@ -36,69 +36,93 @@ export default async function Home({ params: { locale }}) {
 
     ]
 
+    function boldUppercase(text) {
+        return text.split(' ').map(word => {
+          if (word === word.toUpperCase()) {
+            return `<strong>${word}</strong>`;
+          }
+          return word;
+        }).join(' ');
+      }
+
     return (
         <TranslationsProvider locale={locale} namespaces={namespaces} resources={resources}>
         <main className="flex min-h-screen w-full flex-col lg:pt-20">
             <NavBar primary/>
-            <section className="normal_section lg:pt-20 section_img_background gap-2">
+            <section className="firstSection lg:pt-20 section_img_background gap-2">
                 <div className='h-40'>
                     <img
-                        className="h-28 w-auto lg:block xs:hidden"
-                        src="/assets/images/homepage/logonegro.png"
+                        className="h-32 w-auto lg:block xs:hidden"
+                        src="/assets/images/homepage/Paliare-black.png"
                         alt=""
                     />
                 </div>
-                <h1 className="maintitle ">{t('homepage_title')}</h1>
-                <span className="subtitle lg:w-1/4 text-black">{t('homepage_subtitle')}</span>
-                <a href="/filosofia" className="text-black text-md border-b-2 border-black mont">{t('homepage_kwowmore')}</a>
-                <IoIosArrowRoundDown className="text-4xl text-black font-light"  />
+                <h1 className="maintitle md:pt-10">{t('homepage_title')}</h1>
+                <span className="subtitle md:px-0 px-4 lg:w-full text-black">{t('homepage_subtitle')}</span>
+                <img 
+                    className="w-full md:h-[520px] h-[400px] object-cover"
+                    src="/assets/images/homepage/fondo.png"
+                    alt=""
+                />
             </section>
             <section className="normal_section pt-20 min-h-screen bg-white">
                 <div className="w-full flex lg:justify-start justify-center">
-                    <h1 className="lg:text-3xl text-xl mont lg:w-1/4 text-center lg:text-start">
+                    <h1 className="lg:text-3xl text-xl mont lg:w-1/4 text-center lg:text-start tracking-wider">
                         <span className='text-black font-bold mr-2 uppercase'>{t('homepage_section_1_title_1')}</span>
                         <span className='text-black font-light uppercase'>{t('homepage_section_1_title_1_1')}</span>
                     </h1>
                 </div>
                 <div className='relative w-full flex flex-col py-10'>
                     <img src="/assets/images/homepage/puente.svg" alt="" className="w-full lg:h-[600px] " />
-                    <span className="text-black mont lg:text-start text-center text-md lg:w-1/4 py-10 lg:absolute lg:right-0 lg:bottom-60">{t('homepage_section_1_text_1')}</span>
+                    <span className="text-black  mont lg:text-start text-center text-md lg:w-1/4 py-10 lg:absolute lg:right-0 lg:bottom-60">{t('homepage_section_1_text_1')}</span>
                 </div>
-                <div className="w-full flex_center gap-4 py-10 lg:pb-40">
-                    <span className="text-black text-5xl anton font-bold uppercase ">{t('homepage_section_1_text_2')}</span>
-                    <span className="text-black mont text-center text-md lg:text-start lg:w-1/6 w-1/2 ">{t('homepage_section_1_text_3')}</span>
+                <div className="w-full flex_center gap-6 py-10 lg:pb-40 pb-0">
+                    <span className="text-black md:text-6xl text-4xl anton tracking-wider font-bold uppercase ">{t('homepage_section_1_text_2')}</span>
+                    <span className="text-black mont text-center tracking-wide text-md lg:text-start lg:w-1/6 w-1/2 ">{t('homepage_section_1_text_3')}</span>
                 </div>
             </section>
             <div className="bg-darkgray w-full p-4 flex_center">
                 <span className="text-white mont font-bold text-center lg:text-2xl py-10">{t('homepage_section_2_subtitle')}</span>
             </div>
-            <Carousel images={images} />
+            {
+                images.map((image, index) => (
+                    <div key={index} id={index} className="carousel-item flex justify-center w-full relative">
+                        <img src={image.src} className="w-full lg:h-[800px] h-[400px] object-cover brightness-50" alt={image.alt} />
+                        <div className='flex flex-col absolute top-1/2 gap-6 justify-center items-center'>
+                            <h1 className="text-white md:text-6xl text-4xl font-regular m-0 anton uppercase text-center tracking-widest">{image.title}</h1>
+                            <a href={image.path} className="text-white md:text-lg text-sm font-bold mont flex flex-col underline">
+                                {t ('homepage_section_2_slides_more')}
+                            </a>
+                        </div>
+                    </div>
+                ))
+            }
             <section className="normal_section bg-lightgray lg:py-60 py-20 section_doodle">
-                <h1 className="text-3xl flex mont flex-col text-center lg:w-1/2 gap-4">
-                    <span className='text-black font-medium mont lg:text-lg text-lg'>{t('homepage_section_3_title_1')}</span>
-                    <div className='flex flex-col gap-2'>
+                <h1 className="text-3xl flex mont flex-col text-center md:w-1/2 gap-6">
+                    <div className='flex flex-col md:gap-2'>
+                        <span className='text-black font-normal mont lg:text-xl text-lg'>{t('homepage_section_3_title_0')}</span>
+                        <span className='text-black font-normal mont lg:text-xl text-lg'>{t('homepage_section_3_title_1')}</span>
+                    </div>
+                    <div className='flex flex-col md:gap-2'>
                         <span className='text-black font-regular mont lg:text-4xl text-xl uppercase'>{t('homepage_section_3_title_2')}</span>
                         <span className='text-black font-regular mont lg:text-4xl text-xl uppercase'>{t('homepage_section_3_title_3')}</span>
                     </div>
                 </h1>
             </section>
             <section className="normal_section bg-white py-20 min-h-screen lg:pb-0">
-                    <div className='flex justify-end items-center relative z-30'>
-                        <img src="/assets/images/homepage/hormigas.png" alt="" className="w-2/3" />
-                        <span className="tittle_v3 text-start text-black absolute left-0 lg:top-20 top-10 lg:w-full w-2/3">{t('homepage_section_4_title')}</span>
+                <div className='flex flex-col justify-center items-center w-full gap-8'>
+                    <img src="/assets/images/homepage/hormigas.png" alt="" className="md:w-1/5 w-1/2 py-10" />
+                    <div className='flex flex-col gap-4 justify-center items-center'>
+                        <span className="tittle_v3 md:text-4xl text-2xl text-black font-medium tracking-wider text-center">{t('homepage_section_4_title')}</span>
+                        <span className='subtitle_mid text-black md:w-2/3 text-center'>{t('homepage_section_4_subtitle')}</span>
                     </div>
-                    <div className='flex_center_v2 gap-4 relative w-full'>
-                        <div className='border-2 border-black lg:w-1/3  w-4/5 p-6 xl:p-20 flex justify-center items-center absolute left-0 lg:left-40 lg:-top-8 -top-4 z-10'>
-                            <span className='subtitle_mid text-black'>{t('homepage_section_4_subtitle')}</span>
-                        </div>
-                        <div className='flex flex-col gap-4 lg:w-1/2 absolute xl:-right-4 lg:top-20 top-[220px] lg:-right-8'>
-                                <span className='subtitle_mid text-black'>
-                                    {t('homepage_section_4_text_1')}
-                                    {t('homepage_section_4_text_2')}
-                                </span>
-                                <a  href="/filosofia" className="text-black subtitle_mid underline font-medium">{t('homepage_section_4_kwnowmore')}</a>
-                        </div> 
+                    
+                    <div className='flex flex-col gap-4 justify-center items-center text-black'>
+                        <span className="small_subtitle text-black md:w-1/3 text-center">{t('homepage_section_4_text_1')} </span>
+                        <span className="small_subtitle text-black md:w-1/3 text-center" dangerouslySetInnerHTML={{ __html: boldUppercase(t('homepage_section_4_text_2')) }}></span>
                     </div>
+                    <a  href="/filosofia" className="text-black subtitle_mid underline font-medium">{t('homepage_section_4_kwnowmore')}</a>
+                </div>
             </section>
             <section className="normal_section bg-white py-10 lg:pt-0">
                     <svg width="1" height="194" viewBox="0 0 1 194" fill="none" xmlns="http://www.w3.org/2000/svg">

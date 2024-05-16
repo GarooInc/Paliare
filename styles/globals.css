@@ -19,11 +19,8 @@
 }
 
 .section_img_background{
-  background: linear-gradient(rgba(255,255,255,0.5), rgba(255,255,255,0.5)), url('/assets/images/homepage/fondo.png');
-  background-position: center center;
-  background-repeat: no-repeat;
   height: 100vh;
-  background-color: #fff;
+  background-color: #fff; 
 }
 
 .section_doodle{
@@ -37,8 +34,12 @@
   @apply flex flex-col items-center justify-start w-full lg:px-40 px-10;
 }
 
+.firstSection{
+  @apply flex flex-col items-center justify-center w-full;
+}
+
 .maintitle{
-  @apply lg:text-6xl text-5xl font-anton text-center uppercase w-2/3 text-black;
+  @apply lg:text-6xl text-5xl font-anton text-center uppercase lg:w-1/2 xl:w-2/5 w-2/3 text-black tracking-wider;
 }
 
 .tittle{
@@ -66,7 +67,7 @@
 }
 
 .small_subtitle{
-  @apply lg:text-lg text-sm font-montserrat;
+  @apply lg:text-sm text-sm font-montserrat;
 }
 
 .mont{
