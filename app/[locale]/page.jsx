@@ -38,7 +38,7 @@ export default async function Home({ params: { locale }}) {
 
     function boldUppercase(text) {
         return text.split(' ').map(word => {
-          if (word === word.toUpperCase()) {
+            if (word === word.toUpperCase() && /^[A-Z]+$/.test(word)) {
             return `<strong>${word}</strong>`;
           }
           return word;
@@ -148,7 +148,7 @@ export default async function Home({ params: { locale }}) {
                 <div className='bg-darkgray lg:w-1/2 h-full flex_center lg:p-40 p-20'>
                     <span className='subtitle_mid text-white text-end'>{t('homepage_section_5_text_1')}</span>
                 </div>
-                <img src="/assets/images/homepage/patricia.png" alt="" className="absolute left-1/2 top-1/4 lg:w-[200px] w-[150px] transform -translate-x-1/2" />
+                <img src="/assets/images/homepage/trio.png" alt="" className="absolute left-1/2 top-1/4 lg:w-[200px] w-[150px] transform -translate-x-1/2" />
                 <div className='lg:w-1/2 h-full flex flex-col justify-center items-center'>
                     <img src="/assets/images/homepage/logopatricia.png" alt="" className="w-1/2" />
                     <a href="/contacto" className="text-black subtitle_mid underline font-medium">{t('homepage_section_5_text_3')}</a>
@@ -156,7 +156,7 @@ export default async function Home({ params: { locale }}) {
             </section>
             <section className="bg-white flex flex-col relative lg:hidden pt-40">
                 <div className='flex flex-col justify-center items-center absolute -top-8 w-full'>
-                    <img src="/assets/images/homepage/patricia.png" alt="" className="w-[150px] mx-auto lg:absolute lg:left-1/2 lg:top-1/4 lg:w-[200px] lg:transform lg:-translate-x-1/2" />
+                    <img src="/assets/images/homepage/trio.png" alt="" className="w-[150px] mx-auto lg:absolute lg:left-1/2 lg:top-1/4 lg:w-[200px] lg:transform lg:-translate-x-1/2" />
                     <img src="/assets/images/homepage/logopatricia.png" alt="" className="w-1/2 absolute -bottom-4" />
                 </div>
                 <div className='bg-darkgray w-full flex flex-col gap-4 items-center justify-center p-20 '>

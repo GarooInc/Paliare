@@ -33,8 +33,8 @@ const NavBar = ({primary, transparent, black}) => {
             <a href="#" className="-m-1.5 p-0">
               <div className="h-20">
               <img
-                className= {primary ? "lg:hidden h-20 w-auto" : "h-20 w-auto"}
-                src={transparent ? "/assets/images/homepage/logoblanco.png" : "/assets/images/homepage/logonegro.png"}
+                className= {primary ? "lg:hidden h-16 w-auto" : "h-16 w-auto"}
+                src={transparent ? "/assets/images/Paliare-blanco.png" : "/assets/images/Paliare-black.png"}
                 alt=""
                 onClick = {() => router.push('/')}
                 style={black ? {filter: 'invert(1)'} : {filter: 'invert(0)'}}
@@ -59,8 +59,8 @@ const NavBar = ({primary, transparent, black}) => {
           <Dialog.Panel className="fixed top-0 lg:inset-y-0 right-0 z-50 w-full overflow-y-auto bg-black px-6 py-8 lg:py-2 sm:max-w-sm md:max-w-full lg:max-w-full sm:ring-1 sm:ring-gray-900/10">
             <div className="flex items-center justify-between">
                 <img
-                  className="lg:h-20 h-24 w-auto outline-none focus:outline-none"
-                  src="/assets/images/homepage/logoblanco.png"
+                  className="lg:h-16 h-24 w-auto outline-none focus:outline-none"
+                  src="/assets/images/Paliare-blanco.png"
                   alt=""
                   onClick = {() => router.push('/')}
                 />

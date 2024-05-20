@@ -28,30 +28,25 @@ export default async function Filosofia({ params: { locale }}) {
                     <span className="text-white text-center text-2xl anton font-light">{t('philosophy_subtitle')}</span>
                     <img src="/assets/images/filosofia/logopatygris.png" alt="hormigas" className="w-40 object-cover" />
                 </div>
-                <div className="normal_section pt-10">
-                    <div className="flex flex-col lg:flex-row lg:justify-between items-center relative">
-                        <h1 className="tittle_v2 text-black">{t('philosophy_section_2_text_1')}</h1>
-                        <div className="lg:hidden xs:flex flex-col justify-center items-center">
-                            <span className="subtitle_mid text-justify pt-10 text-black">{t('philosophy_section_2_text_2')}</span>
-                            <ul className="pl-6 pt-6">
-                                <li className="liststyle">{t('philosophy_section_2_text_2_1')}</li>
-                                <li className="liststyle">{t('philosophy_section_2_text_2_2')}</li>
-                                <li className="liststyle">{t('philosophy_section_2_text_2_3')}</li>
-                            </ul>
+                <div className="pt-10">
+                        <div className="flex md:flex-row flex-col lg:w-full normal_section justify-center items-center">
+                            <div className='md:w-1/2 flex justify-end'>
+                                <h1 className="tittle_anton tracking-wider leading-8 text-black md:w-1/2 md:text-start text-center">{t('philosophy_section_2_text_1')}</h1>
+                            </div>
+                            <div className="flex flex-col md:w-1/2 lg:pl-4 text-4xl md:pt-40">
+                                <span className="subtitle_mid lg:text-start text-black">{t('philosophy_section_2_text_2')}</span>
+                                <ul className="lg:w-2/3 lg:pl-10 pl-4 pt-4 ">
+                                    <li className="list-disc subtitle_mid text-black">{t('philosophy_section_2_text_2_1')}</li>
+                                    <li className="list-disc subtitle_mid text-black">{t('philosophy_section_2_text_2_2')}</li>
+                                    <li className="list-disc subtitle_mid text-black">{t('philosophy_section_2_text_2_3')}</li>
+                                </ul>
+                            </div>
                         </div>
-                        <img src="/assets/images/filosofia/filosofia4.png" alt="hormigas" className="z-10 w-[400px] object-cover py-10" />
-                        <div className="lg:inset-96 lg:mt-40 bg-gray-500 lg:absolute h-[1px] z-0 xs:w-full lg:w-auto"></div>
-                        <div className="xs:hidden lg:flex flex-col lg:w-1/2">
-                            <span className="subtitle_mid lg:text-start text-black">{t('philosophy_section_2_text_2')}</span>
-                            <ul className="lg:w-2/3 lg:pl-10 pt-10">
-                                <li className="liststyle">{t('philosophy_section_2_text_2_1')}</li>
-                                <li className="liststyle">{t('philosophy_section_2_text_2_2')}</li>
-                                <li className="liststyle">{t('philosophy_section_2_text_2_3')}</li>
-                            </ul>
-                        </div>
+                    <img src="/assets/images/filosofia/filosofia.png" alt="hormigas" className="z-10 w-full md:h-[650px] object-cover py-10" />
+                    <div className='normal_section'>
+                        <span className="subtitle_mid lg:w-1/2 lg:pl-10 text-center pt-10 italic text-black">{t('philosophy_section_2_text_3')}</span>
+                        <span className="subtitle_mid mont font-bold lg:w-1/2 py-20 text-center text-black">{t('philosophy_section_2_text_4')}</span>
                     </div>
-                    <span className="subtitle_mid lg:w-1/2 lg:pl-10 text-center pt-10 italic text-black">{t('philosophy_section_2_text_3')}</span>
-                    <span className="subtitle_mid mont font-bold lg:w-1/2 py-20 text-center text-black">{t('philosophy_section_2_text_4')}</span>
                 </div>
 
             </div>

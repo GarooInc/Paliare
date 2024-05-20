@@ -86,9 +86,6 @@
   @apply font-anton;
 }
 
-.liststyle{
-  @apply list-disc subtitle_mid text-lg  font-medium text-start text-black;
-}
 
 .gridFlex{
   @apply flex flex-col gap-4 py-10;
