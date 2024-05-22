@@ -29,8 +29,8 @@ const Footer = () => {
                 ))
             }
         </aside>
-        <img src="/assets/images/homepage/logonegro.png" alt="logo" className="w-24" /> 
-        <nav className="flex justify-center items-center">
+        <img src="/assets/images/homepage/Paliare-black.png" alt="logo" className="w-32" /> 
+        <nav className="flex justify-center items-center lg:gap-8">
             <span className="text-darkgray mont lg:text-md xs:text-xs ">{t('header:lemma')}</span>
             <div className='flex gap-2'>
             <BsInstagram className="text-darkgray text-2xl" />
