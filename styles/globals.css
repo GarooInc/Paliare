@@ -47,11 +47,14 @@
 }
 
 .tittle{
-  @apply text-center lg:w-1/4 lg:text-4xl text-2xl font-bold font-anton uppercase;
+  @apply text-center lg:w-1/4 lg:text-4xl text-2xl font-bold font-anton uppercase tracking-wider lg:leading-[48px];
+}
+.tittle_lowercase{
+  @apply text-center lg:text-4xl text-2xl font-bold font-anton  tracking-wider lg:leading-[48px];
 }
 
 .tittle_anton{
-  @apply  lg:w-1/2 lg:text-4xl text-2xl font-bold font-anton uppercase;
+  @apply  lg:w-1/2 lg:text-4xl text-2xl font-bold font-anton uppercase lg:leading-[48px];
 }
 
 .tittle_v2{
@@ -62,12 +65,16 @@
   @apply text-2xl tracking-wider font-montserrat uppercase;
 }
 
+.tittle_v4{
+  @apply text-center lg:text-4xl text-2xl font-montserrat uppercase tracking-widest;
+}
+
 .subtitle{
   @apply text-xl font-montserrat  text-center;
 }
 
 .subtitle_mid{
-  @apply text-lg font-montserrat;
+  @apply text-lg font-montserrat leading-8;
 }
 
 .small_subtitle{
