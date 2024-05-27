@@ -9,21 +9,31 @@ import { useTranslation } from 'react-i18next'
 
 const NavBar = ({primary, transparent, black}) => {
     const { t } = useTranslation()
+    const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
+    const [submenuOpen, setSubmenuOpen] = useState(false)
+    const router = useRouter()
 
     const navigation = [
       { name: t('header:menu_home'), href: '/' },
       { name: t('header:menu_philosophy'), href: '/filosofia' },
-      { name: t('header:menu_projects'), href: '/proyectos' },
+      { name: t('header:menu_projects'), href: '/proyectos', hasSubmenu: true },
       { name: t('header:menu_services'), href: '/servicios' },
       { name: t('header:menu_contact'), href: '/contacto' },
     ]
 
-    const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
-    const router = useRouter()
+    const projectSubmenu = [
+      { name:t('header:menu_arq'), href: '/proyectos' },
+      { name:t('header:menu_int'), href: '/interiorismo' },
+      { name:t('header:menu_cons'), href: '/construccion' },
+    ]
 
-    const onClickNav = (href) => {
-      router.push(href)
-      setMobileMenuOpen(false)
+    const onClickNav = (item) => {
+      if (item.hasSubmenu) {
+        setSubmenuOpen(!submenuOpen)  // Toggle submenu visibility
+      } else {
+        router.push(item.href)
+        setMobileMenuOpen(false)
+      }
     }
 
   return (
@@ -80,12 +90,31 @@ const NavBar = ({primary, transparent, black}) => {
               </button>
             </div>
             <div className="mt-10 lg:mt-20 flow-root">
-                  {navigation.map((item) => (
+                  {/* {navigation.map((item) => (
                     <button onClick={() => onClickNav(item.href)} key={item.name}
                     className="nav_item">
                       {item.name}
                     </button>
-                  ))}
+                  ))} */}
+                    {navigation.map((item) => (
+                      <div key={item.name}>
+                        <button className="nav_item" onClick={() => onClickNav(item)}>
+                          {item.name}
+                        </button>
+                        {item.hasSubmenu && submenuOpen && (
+                          <div className="pl-4">
+                            {projectSubmenu.map(sub => (
+                              <button key={sub.name} className="nav_item2" onClick={() => {
+                                router.push(sub.href);
+                                setMobileMenuOpen(false);
+                              }}>
+                                {sub.name}
+                              </button>
+                            ))}
+                          </div>
+                        )}
+                      </div>
+                    ))}
             </div>
           </Dialog.Panel>
         </Dialog>

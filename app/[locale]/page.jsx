@@ -84,19 +84,7 @@ export default async function Home({ params: { locale }}) {
             <div className="bg-darkgray w-full p-4 flex_center">
                 <span className="text-white mont font-bold text-center lg:text-2xl py-10">{t('homepage_section_2_subtitle')}</span>
             </div>
-            {
-                images.map((image, index) => (
-                    <div key={index} id={index} className="carousel-item flex justify-center w-full relative">
-                        <img src={image.src} className="w-full lg:h-[800px] h-[400px] object-cover brightness-50" alt={image.alt} />
-                        <div className='flex flex-col absolute top-1/2 gap-6 justify-center items-center'>
-                            <h1 className="text-white md:text-6xl text-4xl font-regular m-0 anton uppercase text-center tracking-widest">{image.title}</h1>
-                            <a href={image.path} className="text-white md:text-lg text-sm font-bold mont flex flex-col underline">
-                                {t ('homepage_section_2_slides_more')}
-                            </a>
-                        </div>
-                    </div>
-                ))
-            }
+            <Carousel images={images} text={t ('homepage_section_2_slides_more')} />
             <section className="normal_section bg-lightgray lg:py-60 py-20 section_doodle">
                 <h1 className="text-3xl flex mont flex-col text-center md:w-1/2 gap-6">
                     <div className='flex flex-col md:gap-2'>

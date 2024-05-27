@@ -4,8 +4,9 @@ import TranslationsProvider from '@/components/TranslationsProvider'
 import NavBar from '@/components/NavBar/NavBar'
 import LanguageSwitcher from '@/components/LanguageSwitcher/LanguageSwitcher'
 import Footer from '@/components/Footer/Footer'
+import Carousel from '@/components/Carousel/Carousel'
 
-const namespaces = ['Servicios', 'header']
+const namespaces = ['Servicios','header']
 
 export default async function Servicios({ params: { locale }}) {
     const { t, resources } = await initTranslations(locale, namespaces)
@@ -33,6 +34,28 @@ export default async function Servicios({ params: { locale }}) {
         }
     ]
 
+    const images = [
+        {
+            src: '/assets/images/homepage/casa3.jpg',
+            alt: 'casa1',
+            title : t('services_section_2_slide_3_title'),
+            path : '/proyectos'
+        },
+        {
+            src: '/assets/images/homepage/casa1.jpg',
+            alt: 'casa2',
+            title : t('services_section_2_slide_2_title'),
+            path : '/interiorismo'
+        },
+        {
+            src: '/assets/images/homepage/casa2.jpg',
+            alt: 'casa3',
+            title : t('services_section_2_slide_1_title'),
+            path : '/construccion'
+        }
+
+    ]
+
     return (
         <TranslationsProvider locale={locale} namespaces={namespaces} resources={resources}>
             <section className="flex min-h-screen w-full flex-col lg:pt-20 bg-lightergray">
@@ -51,42 +74,7 @@ export default async function Servicios({ params: { locale }}) {
                         </div>
                     </div>
                 </div>
-                <div className='normal_section py-20 bg-black'>
-                    <div className='flex lg:flex-row flex-col-reverse  justify-center items-start gap-8'>
-                        <img src="/assets/images/servicios/4.jpg" alt="servicios1" className="w-full lg:h-[500px] h-[200px] object-cover" />
-                        <div className='flex lg:flex-col flex-row-reverse lg:gap-8 gap-2 w-full lg:w-2/3'>
-                            <div className='flex flex-col gap-2'>
-                                <h1 className="tittle_anton text-white m-0">{t('services_service_1_title')}</h1>
-                                <a href="/proyectos" className="subtitle_mid font-medium text-white underline">{t('services_service_proyects')}</a>
-                            </div>
-                            <img src="/assets/images/servicios/7.jpg" alt="servicios2" className="w-full lg:h-[400px] h-[100px] object-cover" />
-                        </div>
-                    </div>
-                </div>
-                <div className='normal_section py-20 bg-white section_doodle'>
-                    <div className='flex lg:flex-row flex-row-reverse justify-center items-end lg:gap-8 gap-4'>
-                        <img src="/assets/images/servicios/3.jpg" alt="servicios3" className="w-1/2 lg:h-[500px] h-[300px] object-cover" />
-                        <div className='flex flex-col lg:gap-8 gap-4 lg:w-2/3'>
-                            <div className='flex flex-col gap-2'>
-                                <h1 className="tittle_anton text-black m-0">{t('services_service_2_title')}</h1>
-                                <a href="/proyectos" className="subtitle_mid font-medium text-black underline">{t('services_service_proyects')}</a>
-                            </div>
-                            <img src="/assets/images/servicios/10.jpg" alt="servicios4" className=" lg:h-[400px] h-[200px] object-cover" />
-                        </div>
-                    </div>
-                </div>
-                <div className='normal_section py-20 bg-lightergray'>
-                    <div className='flex lg:flex-row flex-col justify-center items-start gap-8'>
-                        <img src="/assets/images/servicios/5.jpg" alt="servicios5" className="w-full lg:h-[500px] h-[200px] object-cover" />
-                        <div className='flex lg:flex-col flex-row lg:gap-8 gap-4 w-full lg:w-2/3'>
-                            <div className='flex flex-col gap-2'>
-                                <h1 className="tittle_anton text-black m-0">{t('services_service_3_title')}</h1>
-                                <a href="/proyectos" className="subtitle_mid font-medium text-black underline">{t('services_service_proyects')}</a>
-                            </div>
-                            <img src="/assets/images/servicios/8.jpg" alt="servicios6" className="w-full lg:h-[400px] h-[200px] object-cover" />
-                        </div>
-                    </div>
-                </div>
+                <Carousel images={images} text={t('services_section_loadmore')} />
                 <div className='normal_section py-4 bg-white'>
                     <h1 className="subtitle font-medium text-center tracking-widest uppercase text-black">{t('services_section_2_title')}</h1>
                 </div>

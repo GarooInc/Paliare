@@ -128,3 +128,7 @@
 .nav_item{
   @apply lg:ml-40 ml-20 tracking-wider uppercase block py-4 text-2xl lg:text-5xl font-semibold font-anton text-white cursor-pointer lg:mt-2
 }
+
+.nav_item2{
+  @apply lg:ml-40 ml-20 tracking-wider uppercase block py-4 text-xl lg:text-3xl font-semibold font-anton text-white cursor-pointer
+}
