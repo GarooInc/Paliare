@@ -37,13 +37,13 @@ const NavBar = ({primary, transparent, black}) => {
     }
 
   return (
-    <header className={transparent ? "absolute inset-x-0 top-0 z-50 bg-transparent" : "absolute inset-x-0 top-0 z-50 bg-white"} >
+    <header className={transparent ? "absolute inset-x-0 top-0 z-50 bg-transparent" : "block inset-x-0 top-0 bg-white"} >
         <nav className="flex items-center justify-between p-6 lg:px-8" aria-label="Global">
           <div className="flex lg:flex-1">
             <a href="#" className="-m-1.5 p-0">
               <div className="h-20">
               <img
-                className= {primary ? "lg:hidden h-20 w-auto" : "h-20 w-40 object-contain p-4 lg:w-auto outline-none focus:outline-none"}
+                className= {primary ? "lg:hidden h-20 w-40 object-contain p-4" : "h-20 w-40 object-contain p-4 lg:w-auto outline-none focus:outline-none"}
                 src={transparent ? "/assets/images/Paliare-blanco.png" : "/assets/images/Paliare-black.png"}
                 alt=""
                 onClick = {() => router.push('/')}
@@ -89,13 +89,7 @@ const NavBar = ({primary, transparent, black}) => {
                 <XMarkIcon className="h-6 w-6 text-white outline-none focus:outline-none" aria-hidden="true" />
               </button>
             </div>
-            <div className="mt-10 lg:mt-20 flow-root">
-                  {/* {navigation.map((item) => (
-                    <button onClick={() => onClickNav(item.href)} key={item.name}
-                    className="nav_item">
-                      {item.name}
-                    </button>
-                  ))} */}
+            <div className="lg:p-0 py-10 lg:mt-20 flow-root">
                     {navigation.map((item) => (
                       <div key={item.name}>
                         <button className="nav_item" onClick={() => onClickNav(item)}>

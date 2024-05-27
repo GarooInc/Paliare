@@ -47,9 +47,9 @@ export default async function Home({ params: { locale }}) {
 
     return (
         <TranslationsProvider locale={locale} namespaces={namespaces} resources={resources}>
-        <main className="flex min-h-screen w-full flex-col lg:pt-20">
+        <main className="flex min-h-screen w-full flex-col">
             <NavBar primary/>
-            <section className="firstSection lg:pt-20 section_img_background gap-2">
+            <section className="firstSection lg:pt-10 section_img_background gap-2">
                 <div className='h-40'>
                     <img
                         className="h-32 w-auto lg:block xs:hidden"
