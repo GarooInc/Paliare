@@ -80,8 +80,8 @@ const Form = () => {
             </form>
             <div className="flex flex-col w-full py-10 gap-4 normal_section">
                 <span className="subtitle_mid text-center text-black">{t('contact_subtitle_1')}</span>
-                <span
-                    className="text-2xl mont text-center font-semibold text-black uppercase">{t('contact_subtitle_2')}</span>
+                <span className="lg:text-2xl text-lg mont text-center font-semibold text-black uppercase tracking-wider">{t('contact_subtitle_2')}</span>
+                <span className="lg:text-2xl text-lg mont text-center font-semibold text-black uppercase tracking-wider">{t('contact_talk')}</span>
             </div>
         </div>
     )
