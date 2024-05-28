@@ -76,6 +76,10 @@
   @apply text-center text-2xl font-montserrat uppercase tracking-widest;
 }
 
+.tittle_v2_anton{
+  @apply text-center md:text-4xl text-2xl font-anton uppercase tracking-widest;
+}
+
 .tittle_v3{
   @apply text-2xl tracking-wider font-montserrat uppercase;
 }
