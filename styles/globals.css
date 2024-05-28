@@ -144,7 +144,7 @@
 }
 
 .btn_contact{
-  @apply text-white mont btn border-2 border-white w-full mt-10 hover:bg-white hover:text-black rounded-none;
+  @apply text-white mont btn border-2 border-white w-full mt-10 bg-black  rounded-none;
 }
 
 /*Navbar*/
