@@ -159,3 +159,9 @@
 #text{
   @apply hidden
 }
+
+/*Services*/
+.timeline svg circle {
+  transition: fill 0.3s ease;
+}
+
