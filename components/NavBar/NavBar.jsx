@@ -59,7 +59,7 @@ const NavBar = ({primary, transparent, black, namepage}) => {
               </div>
             )
           }
-          <div className="flex md:h-20 md:w-40 justify-end">
+          <div className="flex md:w-40 justify-end items-start">
             <button
               type="button"
               className={transparent ? "-m-2.5 inline-flex items-center justify-center rounded-md p-2.5 text-white" : 

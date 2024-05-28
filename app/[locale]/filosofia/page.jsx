@@ -12,7 +12,7 @@ export default async function Filosofia({ params: { locale }}) {
 
     return (
         <TranslationsProvider locale={locale} namespaces={namespaces} resources={resources}>
-        <NavBar namepage={"filosofía"}/>
+        <NavBar namepage={t('header:menu_philosophy')} />
         <main className="flex min-h-screen w-full bg-white">
             <div className='flex flex-col w-full'>
                 <section className="normal_section pt-10">

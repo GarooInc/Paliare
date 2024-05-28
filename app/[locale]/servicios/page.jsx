@@ -61,7 +61,7 @@ export default async function Servicios({ params: { locale }}) {
     return (
         <TranslationsProvider locale={locale} namespaces={namespaces} resources={resources}>
             <section className="flex min-h-screen w-full flex-col lg:pt-20 bg-lightergray">
-                <NavBar transparent black namepage={"servicios"}/>
+                <NavBar transparent black namepage={t('header:menu_services')} />
                 <div className="normal_section lg:py-28 pt-40 pb-20  gap-2 ">
                     <h1 className="text_anton  text-center text-black tracking-widest w-full">{t('services_title')}</h1>
                     <span className="small_subtitle lg:w-1/3 text-center text-black">{t('services_subtitle')}</span>
