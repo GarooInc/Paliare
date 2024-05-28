@@ -15,7 +15,6 @@ export default async function Filosofia({ params: { locale }}) {
         <NavBar/>
         <main className="flex min-h-screen w-full bg-white">
             <div className='flex flex-col w-full'>
-                <ArrowBack />
                 <section className="normal_section pt-10">
                 <h1 className="tittle_v4 py-4 text-black">
                     {t('philosophy_title')}
@@ -28,17 +27,17 @@ export default async function Filosofia({ params: { locale }}) {
                     <span className="tittle_lowercase text-white text-center">{t('philosophy_subtitle')}</span>
                     <img src="/assets/images/filosofia/logopatygris.png" alt="hormigas" className="lg:w-60 w-40 object-cover" />
                 </div>
-                <div className="pt-10">
+                <div className="pt-10 md:py-14">
                         <div className="flex md:flex-row flex-col lg:w-full normal_section justify-center items-center">
                             <div className='md:w-1/2 flex justify-end'>
-                                <h1 className="tittle_anton tracking-widest text-black md:w-1/2 md:text-start text-center">{t('philosophy_section_2_text_1')}</h1>
+                                <h1 className="tittle tracking-widest text-black md:w-1/2 md:text-start text-center">{t('philosophy_section_2_text_1')}</h1>
                             </div>
-                            <div className="flex flex-col md:w-1/2 lg:pl-4 text-4xl md:pt-48">
-                                <span className="subtitle_mid w-3/4 lg:text-start text-black">{t('philosophy_section_2_text_2')}</span>
-                                <ul className="lg:w-2/3 lg:pl-10 pl-4 pt-4 ">
-                                    <li className="list-disc subtitle_mid text-black font-semibold">{t('philosophy_section_2_text_2_1')}</li>
-                                    <li className="list-disc subtitle_mid text-black font-semibold">{t('philosophy_section_2_text_2_2')}</li>
-                                    <li className="list-disc subtitle_mid text-black font-semibold">{t('philosophy_section_2_text_2_3')}</li>
+                            <div className="flex flex-col md:w-1/2 lg:pl-2 text-4xl">
+                                <span className="small_subtitle w-3/4 lg:text-start text-black">{t('philosophy_section_2_text_2')}</span>
+                                <ul className="lg:w-2/3 pl-4 pt-4 ">
+                                    <li className="list-disc small_subtitle text-black font-semibold">{t('philosophy_section_2_text_2_1')}</li>
+                                    <li className="list-disc small_subtitle text-black font-semibold">{t('philosophy_section_2_text_2_2')}</li>
+                                    <li className="list-disc small_subtitle text-black font-semibold">{t('philosophy_section_2_text_2_3')}</li>
                                 </ul>
                             </div>
                         </div>
