@@ -140,7 +140,7 @@
 }
 
 .input_contactv2{
-  @apply w-full h-12 border-2 border-black px-4 bg-transparent text-black mont focus:outline-none rounded-none;
+  @apply w-full h-12 border-[1px] border-black px-4 bg-transparent text-black mont focus:outline-none rounded-none;
 }
 
 .btn_contact{

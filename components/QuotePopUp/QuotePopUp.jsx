@@ -61,9 +61,9 @@ const QuotePopUp = () => {
     {
         showPopUp && (
             <div className='fixed top-0 left-0 w-full h-full bg-black bg-opacity-50 flex justify-center items-center'>
-        <form className="py-10 lg:m-0 mx-10 bg-white flex flex-col justify-center items-center lg:w-1/2 w-full relative">
+        <form className="py-10 md:py-12 lg:m-0 mx-10 bg-white flex flex-col justify-center items-center lg:w-1/2 w-full relative">
             <IoCloseOutline className="absolute top-4 right-4 text-3xl cursor-pointer text-black" onClick={() => setShowPopUp(false)}/>
-            <h1 className="tittle text-center text-black anton py-4">{t('Cotizador:quote_header')}</h1>
+            <h1 className="tittle_anton text-center text-black anton py-4">{t('Cotizador:quote_header')}</h1>
             <div className="flex flex-col justify-between items-center gap-2 lg:w-1/2 w-2/3">
                 <input type="text" placeholder={t('Cotizador:quote_form_name')} className="input_contactv2" name="name"
                        onChange={(e) => setForm({...form, name: e.target.value})}/>
