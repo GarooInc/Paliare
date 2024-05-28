@@ -63,11 +63,11 @@ const Form = () => {
                            onChange={(e) => setForm({...form, phone: e.target.value})}/>
                     <input type="text" placeholder={t('contact_form_service')} className="input_contact" name="service"
                            onChange={(e) => setForm({...form, service: e.target.value})}/>
-                    <textarea className=" input_contact" placeholder={t('contact_form_message')} name="message"
+                    <textarea className="input_contact p-20 flex justify-start" placeholder={t('contact_form_message')} name="message"
                               onChange={(e) => setForm({...form, message: e.target.value})}></textarea>
-                    <button
-                        className="btn_contact"
-                        onClick={handleSubmit}>{t('contact_form_send')}</button>
+                    <div className="flex justify-start items-start w-full">
+                    <button className="btn_contact" onClick={handleSubmit}>{t('contact_form_send')}</button>
+                    </div>
                     {
                         popupMessage.show && (
                             <div
