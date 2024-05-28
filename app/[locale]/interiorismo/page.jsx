@@ -15,7 +15,7 @@ export default async function Interiorismo({ params: { locale }}) {
 
     return (
         <TranslationsProvider locale={locale} namespaces={namespaces} resources={resources}>
-        <NavBar transparent />
+        <NavBar transparent namepage={"proyectos"}/>
         <div className='flex flex-col w-full bg-white'>
             <ImageBanner image="/assets/images/interiorismo/portada.jpg" right navRight="/construccion" left navLeft="/proyectos" text={t('interiorism_title')} />
             <div className="flex w-full bg-white flex-col normal_section">

@@ -15,7 +15,7 @@ export default async function Construccion({ params: { locale }}) {
 
     return (
         <TranslationsProvider locale={locale} namespaces={namespaces} resources={resources}>
-        <NavBar transparent />
+        <NavBar transparent namepage={"proyectos"}/>
         <div className='flex flex-col w-full bg-white'>
             <ImageBanner image="/assets/images/construccion/portada.jpg" right navRight="/proyectos" left navLeft="/proyectos" logo="/assets/images/construccion/Terrare.png" />
             <div className="flex w-full bg-white flex-col normal_section">

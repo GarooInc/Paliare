@@ -112,6 +112,10 @@
   @apply font-anton;
 }
 
+.page_title{
+  @apply font-anton uppercase md:text-xl text-lg tracking-widest;
+}
+
 
 .gridFlex{
   @apply flex flex-col gap-4 py-10;

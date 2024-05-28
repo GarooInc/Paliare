@@ -12,7 +12,7 @@ export default async function Contacto({ params: { locale }}) {
     const { t, resources } = await initTranslations(locale, namespaces)
     return (
         <TranslationsProvider locale={locale} namespaces={namespaces} resources={resources}>
-        <NavBar/>
+        <NavBar namepage={"contacto"}/>
         <div className="flex min-h-screen w-full lg:py-32 py-20 section_doodles">
             <Form />
             <LanguageSwitcher />

@@ -7,7 +7,7 @@ import { useTranslation } from 'react-i18next'
 
 
 
-const NavBar = ({primary, transparent, black}) => {
+const NavBar = ({primary, transparent, black, namepage}) => {
     const { t } = useTranslation()
     const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
     const [submenuOpen, setSubmenuOpen] = useState(false)
@@ -39,7 +39,7 @@ const NavBar = ({primary, transparent, black}) => {
   return (
     <header className={transparent ? "absolute inset-x-0 top-0 z-50 bg-transparent" : "block inset-x-0 top-0 bg-white"} >
         <nav className="flex items-center justify-between p-6 lg:px-8" aria-label="Global">
-          <div className="flex lg:flex-1">
+          <div className="flex">
             <a href="#" className="-m-1.5 p-0">
               <div className="h-20">
               <img
@@ -52,7 +52,14 @@ const NavBar = ({primary, transparent, black}) => {
               </div>
             </a>
           </div>
-          <div className="flex ">
+          {
+            namepage && (
+              <div className="text-center">
+                <h1 className={transparent ? "page_title text-white" : "page_title text-black"}>{t(`header:${namepage}`)}</h1>
+              </div>
+            )
+          }
+          <div className="flex md:h-20 md:w-40 justify-end">
             <button
               type="button"
               className={transparent ? "-m-2.5 inline-flex items-center justify-center rounded-md p-2.5 text-white" : 
