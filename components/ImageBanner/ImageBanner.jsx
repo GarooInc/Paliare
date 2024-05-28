@@ -29,7 +29,7 @@ const ImageBanner = ({image, right, left, navRight, navLeft, text, logo}) => {
 
         }
         {
-          logo && <img src={logo} alt="logo" className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 h-60 w-auto" />
+          logo && <img src={logo} alt="logo" className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 md:h-80 h-40 w-auto" />
         }
     </div>
   )
