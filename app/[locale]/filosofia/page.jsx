@@ -27,8 +27,8 @@ export default async function Filosofia({ params: { locale }}) {
                     <span className="tittle_lowercase text-white text-center">{t('philosophy_subtitle')}</span>
                     <img src="/assets/images/filosofia/logopatygris.png" alt="hormigas" className="lg:w-60 w-40 object-cover" />
                 </div>
-                <div className="pt-10 md:py-14">
-                        <div className="flex md:flex-row flex-col lg:w-full normal_section justify-center items-center">
+                <div className="pt-10 md:py-20">
+                        <div className="flex md:flex-row flex-col lg:w-full normal_section justify-center items-center lg:py-10">
                             <div className='md:w-1/2 flex justify-end'>
                                 <h1 className="tittle tracking-widest text-black md:w-1/2 md:text-start text-center">{t('philosophy_section_2_text_1')}</h1>
                             </div>
@@ -41,13 +41,12 @@ export default async function Filosofia({ params: { locale }}) {
                                 </ul>
                             </div>
                         </div>
-                    <img src="/assets/images/filosofia/filosofia.png" alt="hormigas" className="z-10 w-full md:h-[680px] object-cover py-10" />
+                    <img src="/assets/images/filosofia/filosofia.png" alt="hormigas" className="z-10 w-full md:h-[680px] object-contain" />
                     <div className='normal_section'>
                         <span className="subtitle_mid lg:w-1/2 tracking-wider lg:pl-10 text-center pt-10 italic text-black">{t('philosophy_section_2_text_3')}</span>
                         <span className="subtitle_mid mont font-bold lg:w-1/2 py-20 text-center text-black">{t('philosophy_section_2_text_4')}</span>
                     </div>
                 </div>
-
             </div>
             <LanguageSwitcher />
         </main>

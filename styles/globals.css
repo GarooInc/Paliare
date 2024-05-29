@@ -81,7 +81,7 @@
 }
 
 .tittle_v3{
-  @apply text-2xl tracking-wider font-montserrat uppercase;
+  @apply text-2xl tracking-wider font-montserrat uppercase tracking-widest;
 }
 
 .tittle_v4{

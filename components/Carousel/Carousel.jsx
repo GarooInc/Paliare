@@ -17,7 +17,7 @@ const Carousel = ({images, text}) => {
                         <img src={image.src} className="w-full lg:h-[800px] h-[400px] object-cover brightness-50" alt={image.alt} />
                         <div className='flex flex-col absolute top-1/2 gap-6 justify-center items-center'>
                             <h1 className="text-white md:text-6xl text-4xl font-regular m-0 anton uppercase text-center tracking-widest">{image.title}</h1>
-                            <a href={image.path} className="text-white md:text-lg text-sm font-bold mont flex flex-col underline">
+                            <a href={image.path} className="text-white md:text-lg text-sm font-bold mont flex flex-col underline tracking-wider">
                                 {text}
                             </a>
                         </div>

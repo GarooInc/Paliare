@@ -55,18 +55,18 @@ const Form = () => {
             <form className="py-20 bg-black flex flex-col justify-center items-center lg:w-1/2 w-full">
                 <h1 className="tittle text-center text-white anton py-4">{t('contact_title')}</h1>
                 <div className="flex flex-col justify-between items-center gap-2 lg:w-1/2 w-2/3">
-                    <input type="text" placeholder={t('contact_form_name')} className="input_contact" name="name"
+                    <input type="text" placeholder={t('contact_form_name')} className="input_contact tracking-wider" name="name"
                            onChange={(e) => setForm({...form, name: e.target.value})}/>
-                    <input type="email" placeholder={t('contact_form_email')} className="input_contact" name="email"
+                    <input type="email" placeholder={t('contact_form_email')} className="input_contact tracking-wider" name="email"
                            onChange={(e) => setForm({...form, email: e.target.value})}/>
-                    <input type="text" placeholder={t('contact_form_phone')} className="input_contact" name="phone"
+                    <input type="text" placeholder={t('contact_form_phone')} className="input_contact tracking-wider" name="phone"
                            onChange={(e) => setForm({...form, phone: e.target.value})}/>
-                    <input type="text" placeholder={t('contact_form_service')} className="input_contact" name="service"
+                    <input type="text" placeholder={t('contact_form_service')} className="input_contact tracking-wider" name="service"
                            onChange={(e) => setForm({...form, service: e.target.value})}/>
                     <textarea className="input_contact p-20 flex justify-start" placeholder={t('contact_form_message')} name="message"
                               onChange={(e) => setForm({...form, message: e.target.value})}></textarea>
                     <div className="flex justify-start items-start w-full">
-                    <button className="btn_contact" onClick={handleSubmit}>{t('contact_form_send')}</button>
+                    <button className="btn_contact tracking-wider" onClick={handleSubmit}>{t('contact_form_send')}</button>
                     </div>
                     {
                         popupMessage.show && (
