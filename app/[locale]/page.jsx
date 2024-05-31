@@ -57,7 +57,7 @@ export default async function Home({ params: { locale }}) {
                     />
                 </div>
                 <h1 className="maintitle md:pt-4">{t('homepage_title')}</h1>
-                <span className="subtitle md:px-0 px-10 lg:w-full text-black font-semibold uppercase">{t('homepage_subtitle')}</span>
+                <span className="subtitle md:px-0 px-14 lg:w-full text-black font-semibold uppercase">{t('homepage_subtitle')}</span>
                 <img 
                     className="w-full md:h-[520px] h-[400px] object-cover lg:block hidden"
                     src="/assets/images/homepage/fondo.png"
