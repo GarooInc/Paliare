@@ -37,7 +37,7 @@ const NavBar = ({primary, transparent, black, namepage}) => {
     }
 
   return (
-    <header className={transparent ? "absolute inset-x-0 top-0 z-50 bg-transparent" : "block inset-x-0 top-0 bg-white"} >
+    <header className={transparent ? "absolute inset-x-0 top-0 z-50 bg-transparent" : `lg:block inset-x-0 top-0 ${primary ? 'lg:bg-white bg-transparent absolute z-50 lg:relative' : 'bg-white'}`}>
         <nav className="flex items-center justify-between p-6 lg:px-8" aria-label="Global">
           <div className="flex">
             <a href="#" className="-m-1.5 p-0">

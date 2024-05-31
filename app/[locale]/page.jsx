@@ -49,7 +49,7 @@ export default async function Home({ params: { locale }}) {
         <main className="flex min-h-screen w-full flex-col">
             <NavBar primary/>
             <section className="firstSection lg:pt-10 section_img_background gap-2">
-                <div className='h-40'>
+                <div className='lg:h-40 h-10'>
                     <img
                         className="h-32 w-auto lg:block xs:hidden"
                         src="/assets/images/homepage/Paliare-black.png"
@@ -57,14 +57,14 @@ export default async function Home({ params: { locale }}) {
                     />
                 </div>
                 <h1 className="maintitle md:pt-4">{t('homepage_title')}</h1>
-                <span className="subtitle md:px-0 px-4 lg:w-full text-black">{t('homepage_subtitle')}</span>
+                <span className="subtitle md:px-0 px-10 lg:w-full text-black font-semibold uppercase">{t('homepage_subtitle')}</span>
                 <img 
                     className="w-full md:h-[520px] h-[400px] object-cover lg:block hidden"
                     src="/assets/images/homepage/fondo.png"
                     alt=""
                 />
             </section>
-            <section className="normal_section lg:pt-20 lg:pb-0 py-20 min-h-screen bg-white">
+            <section className="normal_section lg:pt-20 lg:pb-0 py-10 min-h-screen bg-white">
                 <div className="w-full flex lg:justify-start justify-center">
                     <h1 className="lg:text-3xl text-xl mont lg:w-1/4 w-3/4 text-center lg:text-start tracking-wider">
                         <span className='text-black font-bold mr-2 uppercase'>{t('homepage_section_1_title_1')}</span>
@@ -83,7 +83,7 @@ export default async function Home({ params: { locale }}) {
                 </div>
                 <div className="w-full flex_center gap-6 py-10 lg:pb-40 pb-0">
                     <span className="text-black md:text-6xl text-5xl anton tracking-wider font-bold uppercase ">{t('homepage_section_1_text_2')}</span>
-                    <span className="text-black mont text-center tracking-wider text-md lg:text-start lg:w-1/6 w-1/2 ">{t('homepage_section_1_text_3')}</span>
+                    <span className="text-black mont text-center text-md lg:text-start lg:w-1/5 w-3/4 subtitle ">{t('homepage_section_1_text_3')}</span>
                 </div>
             </section>
             <div className="bg-darkgray w-full p-4 flex_center">
@@ -104,7 +104,7 @@ export default async function Home({ params: { locale }}) {
             </section>
             <section className="normal_section bg-white pt-20 lg:pt-40 lg:pb-0">
                 <div className='flex md:flex-row flex-col justify-start items-center w-full gap-8 md:h-[500px]'>
-                    <div className='flex flex-col justify-start items-center gap-4 md:w-1/2 h-full'>
+                    <div className='flex lg:flex-col flex-col-reverse justify-start items-center gap-4 md:w-1/2 h-full'>
                         <span className="tittle_v3 md:w-[320px] md:text-4xl text-2xl text-black font-medium tracking-widest text-center">{t('homepage_section_4_title')}</span>
                         <img src="/assets/images/homepage/hormigas.png" alt="" className=" w-1/2 py-10 md:w-[200px]" />
                     </div>
