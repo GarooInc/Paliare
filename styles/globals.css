@@ -18,16 +18,37 @@
   pointer-events: none;
 }
 
-.section_img_background{
-  height: 100vh;
-  background-color: #fff; 
+@media screen and (max-width: 769px) {
+  .section_img_background{
+    background: url('/assets/images/homepage/fondo.png');
+    background-color: #fff; 
+    background-position: top center;
+    object-fit: contain;
+    height: 600px;
+  }
+
+  .section_doodle{
+    background: url('/assets/images/homepage/doodle.svg');
+    background-color: #F2F2F2;
+    background-position: center right;
+    background-repeat: no-repeat;
+    background-size: 160%;
+  }
 }
 
-.section_doodle{
-  background: url('/assets/images/homepage/doodle.svg');
-  background-color: #F2F2F2;
-  background-position: center center;
-  background-repeat: no-repeat;
+@media screen and (min-width: 769px) {
+  .section_img_background{
+    height: 100vh;
+    background-color: #fff; 
+  }
+
+  .section_doodle{
+    background: url('/assets/images/homepage/doodle.svg');
+    background-color: #F2F2F2;
+    background-position: center center;
+    background-repeat: no-repeat;
+  }
+  
 }
 
 .section_doodles{
@@ -46,7 +67,7 @@
 }
 
 .firstSection{
-  @apply flex flex-col items-center justify-center w-full min-h-screen;
+  @apply flex flex-col items-center lg:justify-center justify-start w-full lg:min-h-screen;
 }
 
 .maintitle{
@@ -54,7 +75,7 @@
 }
 
 .title_cidi{
-  @apply w-full md:w-1/2 md:text-5xl text-2xl font-bold font-anton uppercase lg:leading-[60px] text-black z-20
+  @apply md:w-1/2 w-3/4 md:text-5xl text-3xl font-bold font-anton uppercase lg:leading-[60px] text-black z-20
 }
 
 .tittle{
@@ -94,6 +115,10 @@
 
 .subtitle_mid{
   @apply text-lg font-montserrat leading-8 tracking-wider;
+}
+
+.subtitle_cidi{
+  @apply lg:text-lg text-sm font-montserrat lg:leading-8 tracking-wider;
 }
 
 .small_subtitle{
