@@ -43,7 +43,7 @@ const NavBar = ({primary, transparent, black, namepage}) => {
             <a href="#" className="-m-1.5 p-0">
               <div className="h-20">
               <img
-                className= {primary ? "lg:hidden h-20 w-40 object-contain p-4" : "h-20 w-40 object-contain p-4 lg:w-auto outline-none focus:outline-none"}
+                className= {primary ? "lg:hidden h-20 lg:w-40 w-32 object-contain p-4" : "h-20 lg:w-40 w-32 object-contain p-4 lg:w-auto outline-none focus:outline-none"}
                 src={transparent ? "/assets/images/Paliare-blanco.png" : "/assets/images/Paliare-black.png"}
                 alt=""
                 onClick = {() => router.push('/')}
@@ -54,7 +54,7 @@ const NavBar = ({primary, transparent, black, namepage}) => {
           </div>
           {
             namepage && (
-              <div className="text-center">
+              <div className="text-center lg:m-0 mr-14">
                 <h1 className={transparent && !black ? "page_title text-white" : "page_title text-black"}>{t(`header:${namepage}`)}</h1>
               </div>
             )
@@ -79,7 +79,7 @@ const NavBar = ({primary, transparent, black, namepage}) => {
                 <a href="#" className="-m-1.5 p-0">
                   <div className="h-20">
                     <img
-                      className="h-20 w-40 object-contain p-4 lg:w-auto outline-none focus:outline-none"
+                      className="h-20 lg:w-40 w-32 object-contain p-4 lg:w-auto outline-none focus:outline-none"
                       src="/assets/images/Paliare-blanco.png"
                       alt=""
                       onClick = {() => router.push('/')}
