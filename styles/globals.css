@@ -35,6 +35,14 @@
     background-repeat: no-repeat;
     background-size: 180%;
   }
+
+  .section_doodle2{
+    background: url('/assets/images/homepage/doodle.svg');
+    background-color: #F2F2F2;
+    background-position: center right;
+    background-repeat: no-repeat;
+    background-size: 180%;
+  }
 }
 
 @media screen and (min-width: 769px) {
@@ -91,11 +99,11 @@
 }
 
 .text_anton{
-  @apply lg:text-4xl text-2xl font-bold font-anton uppercase lg:leading-[48px];
+  @apply lg:text-4xl text-xl font-bold font-anton uppercase lg:leading-[48px];
 }
 
 .tittle_v2{
-  @apply text-center text-2xl font-montserrat uppercase tracking-widest;
+  @apply text-center lg:text-2xl text-xl font-montserrat uppercase tracking-widest;
 }
 
 .tittle_v2_anton{
@@ -115,7 +123,7 @@
 }
 
 .subtitle_mid{
-  @apply text-lg font-montserrat leading-8 tracking-wider;
+  @apply lg:text-lg text-sm font-montserrat lg:leading-8 tracking-wider;
 }
 
 .subtitle_cidi{

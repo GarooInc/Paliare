@@ -10,27 +10,41 @@ const Timeline = () => {
     useEffect(() => {
         const handleScroll = () => {
             const scrollPosition = window.scrollY;
-            
+    
             let index;
-            if (scrollPosition < 4700) {
-                index = 0; // No activo
-            } else if (scrollPosition >= 4700 && scrollPosition < 5100) {
-                index = 1; // Primer nivel de activación
-            } else if (scrollPosition >= 5100){
-                index = 2; // Tercer nivel de activación
+            const thresholds = window.innerWidth < 768 ? [2900, 3250] : [4700, 5100];
+    
+            if (scrollPosition < thresholds[0]) {
+                index = 0;
+            } else if (scrollPosition >= thresholds[0] && scrollPosition < thresholds[1]) {
+                index = 1;
+            } else if (scrollPosition >= thresholds[1]){
+                index = 2;
             }
         
             console.log("Scroll position:", scrollPosition, "Index:", index);
             setActiveIndex(index);
         }
-        
     
         window.addEventListener('scroll', handleScroll);
         return () => window.removeEventListener('scroll', handleScroll);
     }, [])
+    
+
+    function SplitText({ text }) {
+        const [firstPart, secondPart] = text.split('.');
+        return (
+            <>
+                {firstPart}.
+                <br />
+                <br />
+                {secondPart}
+            </>
+        );
+    }
 
   return (
-    <div className='normal_section py-10 bg-white'>
+    <div className='lg:px-40 px-4 py-10 bg-white'>
         <h1 className="tittle_v2 font-bold text-black py-10 tracking-widest">{t('services_process_header')}</h1>
         <ul className="timeline timeline-vertical">
         <li>
@@ -50,9 +64,9 @@ const Timeline = () => {
             <div className="timeline-start lg:pr-10 pr-4">
                 <img src="/assets/images/servicios/1.jpg" alt="servicios7" className="lg:w-[400px] lg:h-[400px] h-[200px] object-cover" />
             </div>
-            <div className="timeline-end flex flex-col justify-start items-start md:pl-10 p-4 gap-4">
+            <div className="timeline-end flex flex-col justify-start items-start md:pl-10 pl-6 gap-4">
                 <h1 className="anton text-xl lg:text-3xl text-black uppercase tracking-widest">{t('services_process_title_1')}</h1>
-                <span className="subtitle_mid text-black text-start">{t('services_process_text_1')}</span>
+                <span className="subtitle_mid text-black text-start"><SplitText text={t('services_process_text_1')} /></span>
             </div>
             <hr className="bg-black"/>
         </li>
@@ -70,7 +84,7 @@ const Timeline = () => {
                 )}
             </svg>
             </div>
-            <div className="timeline-start flex flex-col justify-start items-end lg:pr-10 pr-4 py-4 gap-4">
+            <div className="timeline-start flex flex-col justify-start items-end lg:pr-10 pr-6 py-4 gap-4">
                 <h1 className="anton text-xl lg:text-3xl text-black text-end uppercase tracking-widest">{t('services_process_title_2')}</h1>
                 <span className="subtitle_mid text-black text-end">{t('services_process_text_2')}</span>
             </div>
@@ -96,7 +110,7 @@ const Timeline = () => {
                     )}
                 </svg>
             </div>
-            <div className="timeline-end flex flex-col justify-start items-start lg:pl-10 pl-4 py-4 gap-4">
+            <div className="timeline-end flex flex-col justify-start items-start lg:pl-10 pl-6 py-4 gap-4">
                 <h1 className="anton text-xl lg:text-3xl text-black uppercase tracking-widest">{t('services_process_title_3')}</h1>
                 <span className="subtitle_mid text-black text-start">{t('services_process_text_3')}</span>
             </div>
