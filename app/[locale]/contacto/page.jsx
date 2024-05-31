@@ -13,7 +13,7 @@ export default async function Contacto({ params: { locale }}) {
     return (
         <TranslationsProvider locale={locale} namespaces={namespaces} resources={resources}>
         <NavBar namepage={"contacto"}/>
-        <div className="flex min-h-screen w-full lg:py-32 py-20 section_doodles">
+        <div className="flex min-h-screen w-full lg:py-32 py-0 section_doodles lg:bg-transparent bg-white">
             <Form />
             <LanguageSwitcher />
         </div>

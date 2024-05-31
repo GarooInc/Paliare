@@ -55,7 +55,7 @@ const QuotePopUp = () => {
     <div className='flex flex-col w-full lg:justify-center justify-start items-center'>
     {
         !showPopUp && (
-            <button className='link_text pb-10 tracking-wider' onClick={() => setShowPopUp(true)}>{t('Cotizador:link_popup')}</button>
+            <button className='link_text pb-10' onClick={() => setShowPopUp(true)}>{t('Cotizador:link_popup')}</button>
         )
     }
     {

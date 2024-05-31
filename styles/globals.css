@@ -57,14 +57,14 @@
     background-position: center center;
     background-repeat: no-repeat;
   }
-  
-}
 
-.section_doodles{
-  background: url('/assets/images/contacto/contactbg.png');
-  background-color: #FFFF;
-  background-position: center;
-  background-repeat: no-repeat;
+  .section_doodles{
+    background: url('/assets/images/contacto/contactbg.png');
+    background-color: #FFFF;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+  
 }
 
 .normal_section{
@@ -164,7 +164,7 @@
 }
 
 .link_text{
-  @apply text-lg font-montserrat underline text-black font-medium;
+  @apply lg:text-lg text-sm tracking-wider font-montserrat underline text-black font-medium;
 }
 
 
