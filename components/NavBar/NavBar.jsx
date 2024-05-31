@@ -76,7 +76,7 @@ const NavBar = ({primary, transparent, black, namepage}) => {
           <Dialog.Panel className="fixed top-0 lg:inset-y-0 right-0 z-50 w-full overflow-y-auto bg-black sm:max-w-sm md:max-w-full lg:max-w-full sm:ring-1 sm:ring-gray-900/10">
             <div className="flex items-center justify-between p-6 lg:px-8">
               <div className="flex lg:flex-1">
-                <a href="#" className="-m-1.5 p-0">
+                <a href="#" className="-m-1.5 p-0 outline-none focus:outline-none">
                   <div className="h-20">
                     <img
                       className="h-20 lg:w-40 w-32 object-contain p-4 lg:w-auto outline-none focus:outline-none"
