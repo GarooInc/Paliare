@@ -178,11 +178,11 @@
 }
 
 .btn_contact{
-  @apply text-white mont btn lg:w-1/2 hover:bg-black w-full mt-10 bg-black  rounded-none;
+  @apply text-white mont btn lg:w-1/2 hover:bg-black w-full lg:mt-10 mt-4 bg-black  rounded-none;
 }
 
 .btn_contact_v2{
-  @apply text-white mont btn lg:w-1/2 border-2 border-white hover:bg-black w-full mt-10 bg-black  rounded-none;
+  @apply text-black mont btn lg:w-1/2 border-2 border-black  w-full lg:mt-10 mt-4 bg-white  rounded-none;
 }
 
 /*Navbar*/
