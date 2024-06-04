@@ -12,7 +12,7 @@ const Timeline = () => {
             const scrollPosition = window.scrollY;
     
             let index;
-            const thresholds = window.innerWidth < 768 ? [2850, 3100] : [4700, 5100];
+            const thresholds = window.innerWidth < 768 ? [2850, 3050] : [4700, 5100];
     
             if (scrollPosition < thresholds[0]) {
                 index = 0;
