@@ -102,9 +102,9 @@ export default async function Servicios({ params: { locale }}) {
                                 <img src={content.img} alt={`servicios${index}`} className="lg:h-[600px] h-[250px] object-cover brightness-50" />
                                 <div className='flex absolute lg:bottom-2 bottom-8 p-2 lg:w-[250px] lg:pl-10 justify-start items-start h-1/4'>
                                     <span 
-                                    className={index % 2 === 0 ? "mont text-white uppercase font-bold lg:text-sm lg:ml-2 ml-4 text-xs lg:leading-6 leading-4 tracking-wider" : "mont text-white uppercase font-light lg:text-sm text-xs mx-2 lg:leading-6 leading-4 tracking-wider"} >
+                                    className={index % 2 === 0 ? "mont text-white uppercase font-bold lg:text-sm lg:ml-2 ml-2 text-xs lg:leading-6 leading-4 tracking-wider" : "mont text-white uppercase font-light lg:text-sm text-xs lg:mx-2 lg:leading-6 leading-4 tracking-wider"} >
                                         {content.boldText}
-                                        <span className={index % 2 === 0 ? "mont text-white uppercase font-light mx-2 lg:ml-2 ml-4 lg:text-sm text-xs lg:leading-6 leading-4 tracking-wider" : "mont text-white uppercase mx-2 font-bold  lg:text-sm text-xs lg:leading-6 leading-4 tracking-wider"}>
+                                        <span className={index % 2 === 0 ? "mont text-white uppercase font-light lg:mx-2 lg:ml-2 ml-2 lg:text-sm text-xs lg:leading-6 leading-4 tracking-wider" : "mont text-white uppercase mx-2 font-bold  lg:text-sm text-xs lg:leading-6 leading-4 tracking-wider"}>
                                             {content.text}
                                         </span>
                                     </span>

@@ -66,7 +66,7 @@ const Form = () => {
                     <textarea className="input_contact p-20 flex justify-start" placeholder={t('contact_form_message')} name="message"
                               onChange={(e) => setForm({...form, message: e.target.value})}></textarea>
                     <div className="flex justify-start items-start w-full">
-                    <button className="btn_contact tracking-wider" onClick={handleSubmit}>{t('contact_form_send')}</button>
+                    <button className="btn_contact_v2 tracking-wider" onClick={handleSubmit}>{t('contact_form_send')}</button>
                     </div>
                     {
                         popupMessage.show && (
