@@ -17,7 +17,7 @@ export default async function Construccion({ params: { locale }}) {
         <TranslationsProvider locale={locale} namespaces={namespaces} resources={resources}>
         <NavBar transparent namepage={t('header:menu_projects')} />
         <div className='flex flex-col w-full bg-white'>
-            <ImageBanner image="/assets/images/construccion/portada.jpg" right navRight="/proyectos" left navLeft="/proyectos" logo="/assets/images/construccion/Terrare.png" />
+            <ImageBanner image="/assets/images/construccion/portada.jpg" right navRight="/proyectos" left navLeft="/interiorismo" logo="/assets/images/construccion/Terrare.png" />
             <div className="flex w-full bg-white flex-col normal_section">
                 <span className="lg:w-2/3 subtitle_mid text-black text-center pt-10 lg:pt-20 lg:pb-10">{t('construction_text1')}</span>
                 <div className="grid grid-cols-2 grid-rows-2 gap-4 lg:py-10 pt-10">
