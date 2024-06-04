@@ -100,11 +100,11 @@ export default async function Servicios({ params: { locale }}) {
                         gridContent.map((content, index) => (
                             <div key={index} className='flex flex-col gap-4 justify-between relative'>
                                 <img src={content.img} alt={`servicios${index}`} className="lg:h-[600px] h-[250px] object-cover brightness-50" />
-                                <div className='flex absolute lg:bottom-2 bottom-4 lg:w-[250px] w-4/5 lg:pl-10 pl-4 justify-start items-start lg:h-1/4 h-2/5'>
+                                <div className='flex absolute lg:bottom-2 bottom-4 lg:w-[250px] w-[95%] lg:pl-10 pl-4 justify-start items-start lg:h-1/4 h-2/5'>
                                     <span 
-                                    className={index % 2 === 0 ? "mont text-white uppercase font-bold lg:text-sm lg:ml-2 ml-2 text-xs lg:leading-6 leading-4 tracking-wider" : "mont text-white uppercase font-light lg:text-sm text-xs lg:mx-2 lg:leading-6 leading-4 tracking-wider"} >
+                                    className={index % 2 === 0 ? "mont text-white uppercase font-bold lg:text-sm lg:ml-2 text-xs lg:leading-6 leading-4 tracking-wider" : "mont text-white uppercase font-light lg:text-sm text-xs lg:mx-2 mx-1 lg:leading-6 leading-4 tracking-wider"} >
                                         {content.boldText}
-                                        <span className={index % 2 === 0 ? "mont text-white uppercase font-light lg:mx-2 lg:ml-2 ml-2 lg:text-sm text-xs lg:leading-6 leading-4 tracking-wider" : "mont text-white uppercase mx-2 font-bold  lg:text-sm text-xs lg:leading-6 leading-4 tracking-wider"}>
+                                        <span className={index % 2 === 0 ? "mont text-white uppercase font-light lg:mx-2 mx-1 lg:text-sm text-xs lg:leading-6 leading-4 tracking-wider" : "mont text-white uppercase lg:mx-2 mx-1 font-bold  lg:text-sm text-xs lg:leading-6 leading-4 tracking-wider"}>
                                             {content.text}
                                         </span>
                                     </span>
