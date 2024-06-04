@@ -144,7 +144,7 @@ export default async function Home({ params: { locale }}) {
             <section className="bg-white flex flex-col relative lg:hidden pt-40">
                 <div className='flex flex-col justify-center items-center absolute -top-12 w-full'>
                     <img src="/assets/images/homepage/trio.png" alt="" className="w-[200px] mx-auto" />
-                    <img src="/assets/images/homepage/logopatricia.png" alt="" className="w-2/3 absolute -bottom-10 left-24" />
+                    <img src="/assets/images/homepage/logopatricia.png" alt="" className="w-2/3 absolute -bottom-12 left-24" />
                 </div>
                 <div className='bg-darkgray w-full flex flex-col items-center justify-center px-16 py-24 gap-8'>
                     <span className='small_subtitle text-white text-center mt-10'>{t('homepage_section_5_text_1')}</span>

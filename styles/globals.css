@@ -151,7 +151,7 @@
 }
 
 .page_title{
-  @apply font-anton uppercase md:text-xl text-lg tracking-widest;
+  @apply font-anton uppercase md:text-xl text-sm tracking-widest;
 }
 
 
