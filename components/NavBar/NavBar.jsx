@@ -54,7 +54,7 @@ const NavBar = ({primary, transparent, black, namepage}) => {
           </div>
           {
             namepage && (
-              <div className="text-center lg:m-0 mr-16">
+              <div className="text-center lg:m-0 mr-14">
                 <h1 className={transparent && !black ? "page_title text-white" : "page_title text-black"}>{t(`header:${namepage}`)}</h1>
               </div>
             )
