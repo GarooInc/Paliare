@@ -51,7 +51,7 @@ export default async function Home({ params: { locale }}) {
             <section className="firstSection section_img_background gap-2">
                 <div className='lg:h-40 h-10'>
                     <img
-                        className="lg:h-32 md:h-28 w-auto md:block xs:hidden"
+                        className="lg:h-32 md:h-28 w-auto lg:block xs:hidden"
                         src="/assets/images/homepage/Paliare-black.png"
                         alt=""
                     />
