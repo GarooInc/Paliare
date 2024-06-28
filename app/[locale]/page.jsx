@@ -104,7 +104,7 @@ export default async function Home({ params: { locale }}) {
             </section>
             <section className="normal_section bg-white pt-20 lg:pt-40 lg:pb-0">
                 <div className='flex md:flex-row flex-col justify-start items-center w-full gap-8 md:h-[500px]'>
-                    <div className='flex lg:flex-col flex-col-reverse lg:justify-start md:justify-center items-center gap-4 md:w-1/2 h-full'>
+                    <div className='flex lg:flex-col flex-col-reverse lg:justify-start md:justify-evenly items-center gap-4 md:w-1/2 h-full'>
                         <span className="tittle_v3 md:w-[320px] md:text-4xl text-2xl text-black font-medium tracking-widest text-center">{t('homepage_section_4_title')}</span>
                         <img src="/assets/images/homepage/hormigas.png" alt="" className=" w-1/2 lg:py-10 md:w-[200px]" />
                     </div>
