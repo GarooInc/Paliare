@@ -15,7 +15,7 @@ export default async function Filosofia({ params: { locale }}) {
         <NavBar namepage={t('header:menu_philosophy')} transparent={true}/>
         <main className="flex min-h-screen w-full bg-white">
             <div className='flex flex-col w-full'>
-                <section className="normal_section lg:pt-20 pt-24 img_philosophy_background">
+                <section className="normal_section pt-24 img_philosophy_background">
                 <h1 className="tittle_v4 py-4 text-black">
                     {t('philosophy_title')}
                 </h1>
@@ -31,10 +31,10 @@ export default async function Filosofia({ params: { locale }}) {
                         <div className="flex md:flex-row flex-col lg:w-full normal_section justify-center items-center lg:py-10 py-4 gap-4 lg:gap-0">
                             <div className='md:w-1/2 w-full flex lg:justify-end justify-center'>
                                 <h1 className="hidden lg:flex tittle tracking-widest text-black md:w-1/2 md:text-start text-center">{t('philosophy_section_2_text_1')}</h1>
-                                <h1 className="lg:hidden subtitle md:px-0 px-10 lg:w-full text-black font-semibold uppercase">{t('philosophy_section_2_text_1')}</h1>
+                                <h1 className="lg:hidden tittle md:px-0 px-10 lg:w-full text-black font-semibold uppercase">{t('philosophy_section_2_text_1')}</h1>
                             </div>
                             <div className="flex flex-col md:w-1/2 w-full lg:pl-2 text-4xl lg:justify-start justify-center">
-                                <span className="small_subtitle lg:w-3/4 lg:text-start text-center text-black">{t('philosophy_section_2_text_2')}</span>
+                                <span className="small_subtitle lg:w-3/4 lg:text-start text-center md:text-start text-black">{t('philosophy_section_2_text_2')}</span>
                                 <ul className="lg:w-2/3 lg:pl-4 pt-4 pl-12">
                                     <li className="list-disc small_subtitle text-black font-semibold">{t('philosophy_section_2_text_2_1')}</li>
                                     <li className="list-disc small_subtitle text-black font-semibold">{t('philosophy_section_2_text_2_2')}</li>
@@ -42,7 +42,7 @@ export default async function Filosofia({ params: { locale }}) {
                                 </ul>
                             </div>
                         </div>
-                    <img src="/assets/images/filosofia/filosofia.png" alt="hormigas" className="z-10 w-full md:h-[680px] h-[180px] lg:object-contain object-cover lg:my-0 my-8" />
+                    <img src="/assets/images/filosofia/filosofia.png" alt="hormigas" className="z-10 w-full md:h-[480px] lg:h-[680px] h-[180px] lg:object-contain object-cover lg:my-0 my-8" />
                     <div className='normal_section'>
                         <span className="subtitle lg:w-1/2 tracking-wider lg:pl-10 text-center pt-10 italic text-black">{t('philosophy_section_2_text_3')}</span>
                         <span className="subtitle mont font-bold lg:w-1/2 lg:py-20 py-10 text-center text-black">{t('philosophy_section_2_text_4')}</span>

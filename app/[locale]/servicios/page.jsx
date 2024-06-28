@@ -73,7 +73,7 @@ export default async function Servicios({ params: { locale }}) {
 
     return (
         <TranslationsProvider locale={locale} namespaces={namespaces} resources={resources}>
-            <section className="flex lg:min-h-screen w-full flex-col lg:pt-20 bg-lightergray">
+            <section className="flex lg:min-h-screen w-full flex-col md:pt-20 bg-lightergray">
                 <NavBar transparent black namepage={t('header:menu_services')} />
                 <div className="normal_section lg:py-28 pt-28 pb-10  gap-2 ">
                     <h1 className="text_anton  text-center text-black tracking-widest w-full">{t('services_title')}</h1>
@@ -100,7 +100,7 @@ export default async function Servicios({ params: { locale }}) {
                         gridContent.map((content, index) => (
                             <div key={index} className='flex flex-col gap-4 justify-between relative'>
                                 <img src={content.img} alt={`servicios${index}`} className="lg:h-[600px] h-[250px] object-cover brightness-50" />
-                                <div className='flex absolute lg:bottom-2 bottom-4 lg:w-[250px] w-[95%] lg:pl-10 pl-4 justify-start items-start lg:h-1/4 h-2/5'>
+                                <div className='flex absolute lg:bottom-2 bottom-4 lg:w-[250px] w-[95%] md:w-[60%] lg:pl-10 pl-4 justify-start items-start lg:h-1/4 h-2/5'>
                                     <span 
                                     className={index % 2 === 0 ? "mont text-white uppercase font-bold lg:text-sm lg:ml-2 text-xs lg:leading-6 leading-4 tracking-wider" : "mont text-white uppercase font-light lg:text-sm text-xs lg:mx-2 mx-1 lg:leading-6 leading-4 tracking-wider"} >
                                         {content.boldText}

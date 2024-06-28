@@ -62,7 +62,7 @@ const Timeline = () => {
             </svg>
             </div>
             <div className="timeline-start lg:pr-10 pr-4">
-                <img src="/assets/images/servicios/1.jpg" alt="servicios7" className="lg:w-[400px] lg:h-[400px] h-[200px] object-cover" />
+                <img src="/assets/images/servicios/1.jpg" alt="servicios7" className="md:w-[400px] md:h-[400px] h-[200px] object-cover" />
             </div>
             <div className="timeline-end flex flex-col justify-start items-start md:pl-10 pl-6 gap-4">
                 <h1 className="anton text-xl lg:text-3xl text-black uppercase tracking-widest">{t('services_process_title_1')}</h1>
@@ -89,14 +89,14 @@ const Timeline = () => {
                 <span className="subtitle_mid text-black text-end">{t('services_process_text_2')}</span>
             </div>
             <div className="timeline-end lg:pl-10 pl-4">
-                <img src="/assets/images/servicios/9.jpg" alt="servicios8" className="lg:w-[400px] lg:h-[400px] h-[200px] object-cover" />
+                <img src="/assets/images/servicios/9.jpg" alt="servicios8" className="md:w-[400px] md:h-[400px] h-[200px] object-cover" />
             </div>
             <hr className="bg-black"/>
         </li>
         <li>
             <hr className="bg-black"/>
             <div className="timeline-start lg:pr-10 pr-4 py-4">
-                <img src="/assets/images/servicios/3.jpg" alt="servicios9" className="lg:w-[400px] lg:h-[400px] h-[200px] object-cover" />
+                <img src="/assets/images/servicios/3.jpg" alt="servicios9" className="md:w-[400px] md:h-[400px] h-[200px] object-cover" />
             </div>
             <div className="timeline-middle">
                 <svg width="33" height="33" viewBox="0 0 33 33" fill="none" xmlns="http://www.w3.org/2000/svg">

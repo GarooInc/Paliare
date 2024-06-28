@@ -72,14 +72,14 @@ export default async function Home({ params: { locale }}) {
                     </h1>
                 </div>
                 <div className='relative w-full flex flex-col lg:py-10 pt-10'>
-                    <img src="/assets/images/homepage/puente.svg" alt="" className="w-full lg:h-[600px] " />
+                    <img src="/assets/images/homepage/puente.svg" alt="" className="w-full md:h-[600px] " />
                     <div className='lg:py-0 py-10 flex flex-col'>
                         <span className="text-black  mont lg:text-start text-center text-md lg:w-1/4 py-10 lg:absolute lg:right-0 lg:bottom-60 tracking-wider">{t('homepage_section_1_text_1')}</span>
                         <a href='/filosofia' className="text-black font-bold small_subtitle text-center tracking-wider underline lg:hidden">{t('homepage_kwowmore')}</a>
                     </div>
                 </div>
                 <div className='lg:hidden flex justify-center items-center'>
-                    <img src="/assets/images/homepage/rect.png" alt="" className="w-1/2" />
+                    <img src="/assets/images/homepage/rect.png" alt="" className="w-1/2 md:w-2/3" />
                 </div>
                 <div className="w-full flex_center gap-6 py-10 lg:pb-40 pb-0">
                     <span className="text-black md:text-6xl text-5xl anton tracking-wider font-bold uppercase ">{t('homepage_section_1_text_2')}</span>
