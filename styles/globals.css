@@ -18,6 +18,41 @@
   pointer-events: none;
 }
 
+@media screen and (min-width: 770px) and (max-width: 1024px) {
+  .section_img_background{
+    background-color: #fff;
+  }
+
+  .firstSection {
+    min-height: 100vh;
+    justify-content: center;
+  }
+
+  .img_philosophy_background{
+    background: url('/assets/images/filosofia/hormigas.png');
+    background-color: #FFF;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+  }
+
+  .section_doodle{
+    background: url('/assets/images/homepage/doodle.svg');
+    background-color: #F2F2F2;
+    background-position: center right;
+    background-repeat: no-repeat;
+    background-size: 180%;
+  }
+
+  .section_doodle2{
+    background: url('/assets/images/homepage/doodle.svg');
+    background-color: #F2F2F2;
+    background-position: center right;
+    background-repeat: no-repeat;
+    background-size: 180%;
+  }
+}
+
 @media screen and (max-width: 769px) {
   .section_img_background{
     background: url('/assets/images/homepage/mobile.png');

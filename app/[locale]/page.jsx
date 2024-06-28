@@ -51,15 +51,15 @@ export default async function Home({ params: { locale }}) {
             <section className="firstSection section_img_background gap-2">
                 <div className='lg:h-40 h-10'>
                     <img
-                        className="h-32 w-auto lg:block xs:hidden"
+                        className="lg:h-32 md:h-28 w-auto md:block xs:hidden"
                         src="/assets/images/homepage/Paliare-black.png"
                         alt=""
                     />
                 </div>
-                <h1 className="maintitle">{t('homepage_title')}</h1>
+                <h1 className="maintitle md:pt-10 lg:pt-0">{t('homepage_title')}</h1>
                 <span className="subtitle md:px-0 px-14 lg:w-full text-black font-semibold uppercase">{t('homepage_subtitle')}</span>
                 <img 
-                    className="w-full md:h-[520px] h-[400px] object-cover lg:block hidden"
+                    className="w-full md:h-[520px] h-[400px] object-cover md:block hidden"
                     src="/assets/images/homepage/fondo.png"
                     alt=""
                 />
@@ -96,7 +96,7 @@ export default async function Home({ params: { locale }}) {
                         <span className='text-black font-normal mont lg:text-xl text-lg tracking-wider'>{t('homepage_section_3_title_0')}</span>
                         <span className='text-black font-normal mont lg:text-xl text-lg tracking-wider'>{t('homepage_section_3_title_1')}</span>
                     </div>
-                    <div className='flex flex-col md:gap-4 w-full'>
+                    <div className='flex flex-col lg:gap-4 w-full'>
                         <span className='text-black font-regular mont lg:text-5xl text-xl uppercase tracking-wider'>{t('homepage_section_3_title_2')}</span>
                         <span className='text-black font-regular mont lg:text-5xl text-xl uppercase tracking-wider'>{t('homepage_section_3_title_3')}</span>
                     </div>
@@ -104,9 +104,9 @@ export default async function Home({ params: { locale }}) {
             </section>
             <section className="normal_section bg-white pt-20 lg:pt-40 lg:pb-0">
                 <div className='flex md:flex-row flex-col justify-start items-center w-full gap-8 md:h-[500px]'>
-                    <div className='flex lg:flex-col flex-col-reverse justify-start items-center gap-4 md:w-1/2 h-full'>
+                    <div className='flex lg:flex-col flex-col-reverse lg:justify-start md:justify-center items-center gap-4 md:w-1/2 h-full'>
                         <span className="tittle_v3 md:w-[320px] md:text-4xl text-2xl text-black font-medium tracking-widest text-center">{t('homepage_section_4_title')}</span>
-                        <img src="/assets/images/homepage/hormigas.png" alt="" className=" w-1/2 py-10 md:w-[200px]" />
+                        <img src="/assets/images/homepage/hormigas.png" alt="" className=" w-1/2 lg:py-10 md:w-[200px]" />
                     </div>
                     <div className='flex flex-col lg:justify-start justify-center items-center gap-6 md:w-1/3 h-full'>
                         <span className='subtitle_mid text-black md:text-start text-center tracking-wider'>{t('homepage_section_4_subtitle')}</span>
@@ -121,7 +121,7 @@ export default async function Home({ params: { locale }}) {
                     <line x1="0.5" y1="-2.18557e-08" x2="0.500008" y2="194" stroke="black"/>
                     </svg>
                     <img src="/assets/images/homepage/logoCIDI.png" alt="" className="md:w-32 w-24 my-8" />
-                    <div className='flex flex-col lg:justify-center justify-start lg:items-center lg:text-center gap-4 lg:gap-10 py-10'>
+                    <div className='flex flex-col md:justify-center justify-start md:items-center md:text-center gap-4 md:gap-10 py-10'>
                         <h1 className="title_cidi tracking-wider m-0">{t('homepage_section_5_title')}</h1>
                         <span className='subtitle_cidi text-black md:w-1/2 w-2/3'>{t('homepage_section_5_subtitle')}</span>
                     </div>
@@ -132,22 +132,22 @@ export default async function Home({ params: { locale }}) {
                     </div>
             </section>
             <section className=" bg-white h-[600px] lg:flex relative hidden">
-                <div className='bg-darkgray lg:w-1/2 h-full flex_center lg:p-56 p-20'>
+                <div className='bg-darkgray lg:w-1/2 h-full flex_center md:p-56 p-20'>
                     <span className='small_subtitle text-white text-end'>{t('homepage_section_5_text_1')}</span>
                 </div>
                 <img src="/assets/images/homepage/trio.png" alt="" className="absolute left-1/2 top-24 lg:w-[300px] transform -translate-x-1/2" />
                 <div className='lg:w-1/2 h-full flex flex-col justify-center items-center'>
-                    <img src="/assets/images/homepage/logopatricia.png" alt="" className="w-1/2" />
+                    <img src="/assets/images/homepage/logopaty.png" alt="" className="w-1/3" />
                     <a href="/contacto" className="text-black small_subtitle underline font-medium tracking-wider">{t('homepage_section_5_text_3')}</a>
                 </div>
             </section>
             <section className="bg-white flex flex-col relative lg:hidden pt-40">
                 <div className='flex flex-col justify-center items-center absolute -top-12 w-full'>
-                    <img src="/assets/images/homepage/trio.png" alt="" className="w-[200px] mx-auto" />
-                    <img src="/assets/images/homepage/logopatricia.png" alt="" className="w-2/3 absolute -bottom-12 left-24" />
+                    <img src="/assets/images/homepage/trio.png" alt="" className="w-[200px] mx-auto md:inset-x-0" />
+                    <img src="/assets/images/homepage/logopaty.png" alt="" className="w-2/3 absolute -bottom-16 mx-auto inset-x-0 md:w-[250px] md:-bottom-20" />
                 </div>
-                <div className='bg-darkgray w-full flex flex-col items-center justify-center px-16 py-24 gap-8'>
-                    <span className='small_subtitle text-white text-center mt-10'>{t('homepage_section_5_text_1')}</span>
+                <div className='bg-darkgray w-full flex flex-col items-center justify-center px-16 pt-32 pb-24 md:px-24 gap-8 md:gap-4'>
+                    <span className='small_subtitle text-white text-center mt-10 md:mt-16'>{t('homepage_section_5_text_1')}</span>
                     <a href="/contacto" className="text-white small_subtitle underline font-medium">{t('homepage_section_5_text_3')}</a>
                 </div>
             </section>
