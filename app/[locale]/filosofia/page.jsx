@@ -12,15 +12,15 @@ export default async function Filosofia({ params: { locale }}) {
 
     return (
         <TranslationsProvider locale={locale} namespaces={namespaces} resources={resources}>
-        <NavBar namepage={t('header:menu_philosophy')} />
+        <NavBar namepage={t('header:menu_philosophy')} transparent={true}/>
         <main className="flex min-h-screen w-full bg-white">
             <div className='flex flex-col w-full'>
-                <section className="normal_section lg:pt-10">
+                <section className="normal_section lg:pt-20 pt-24 img_philosophy_background">
                 <h1 className="tittle_v4 py-4 text-black">
                     {t('philosophy_title')}
                 </h1>
                 <span className="subtitle text-center w-4/5 lg:w-2/5 text-black" >{t('philosophy_text_1')}</span>
-                <img src="/assets/images/filosofia/fotoequipoejemplo.jpeg" alt="fotoequipoejemplo" className="w-full lg:h-[700px] object-cover" />
+                <div className="w-full lg:h-[400px] h-[200px]"></div>
                 <span className="tittle lg:w-3/4 py-20 text-black">{t('philosophy_text_2')}</span>
                 </section>
                 <div className='flex flex-col bg-black w-full p-10 lg:p-20 justify-center items-center'>

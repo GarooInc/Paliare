@@ -48,7 +48,7 @@ export default async function Home({ params: { locale }}) {
         <TranslationsProvider locale={locale} namespaces={namespaces} resources={resources}>
         <main className="flex min-h-screen w-full flex-col">
             <NavBar primary/>
-            <section className="firstSection lg:pt-10 section_img_background gap-2">
+            <section className="firstSection section_img_background gap-2">
                 <div className='lg:h-40 h-10'>
                     <img
                         className="h-32 w-auto lg:block xs:hidden"
@@ -56,7 +56,7 @@ export default async function Home({ params: { locale }}) {
                         alt=""
                     />
                 </div>
-                <h1 className="maintitle md:pt-4">{t('homepage_title')}</h1>
+                <h1 className="maintitle">{t('homepage_title')}</h1>
                 <span className="subtitle md:px-0 px-14 lg:w-full text-black font-semibold uppercase">{t('homepage_subtitle')}</span>
                 <img 
                     className="w-full md:h-[520px] h-[400px] object-cover lg:block hidden"

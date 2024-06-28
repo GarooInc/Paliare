@@ -21,10 +21,19 @@
 @media screen and (max-width: 769px) {
   .section_img_background{
     background: url('/assets/images/homepage/mobile.png');
-    background-color: #FFF;
+    background-color: #fff;
     background-repeat: no-repeat;
     background-size: cover;
     padding: 24% 0 20%;
+    position: relative;
+  }
+
+  .img_philosophy_background{
+    background: url('/assets/images/filosofia/hormigas.png');
+    background-color: #FFF;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
     position: relative;
   }
 
@@ -47,8 +56,15 @@
 
 @media screen and (min-width: 769px) {
   .section_img_background{
-    height: 100vh;
     background-color: #fff; 
+  }
+
+  .img_philosophy_background{
+    background: url('/assets/images/filosofia/hormigas.png');
+    background-color: #FFF;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
   }
 
   .section_doodle{
