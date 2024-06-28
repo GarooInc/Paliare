@@ -107,14 +107,14 @@ export default async function Home({ params: { locale }}) {
                         <span className='text-black font-normal mont md:text-xl text-sm tracking-wider'>{t('homepage_section_3_title_1')}</span>
                     </div>
                     <div className='flex flex-col lg:gap-4 w-full'>
-                        <span className='text-black font-regular mont md:text-5xl text-lg uppercase tracking-wider xs:tracking-wide'>{t('homepage_section_3_title_2')}</span>
-                        <span className='text-black font-regular mont md:text-5xl text-lg uppercase tracking-wider xs:tracking-wide'>{t('homepage_section_3_title_3')}</span>
+                        <span className='text-black font-regular mont lg:text-5xl md:text-4xl text-lg uppercase tracking-wider xs:tracking-wide'>{t('homepage_section_3_title_2')}</span>
+                        <span className='text-black font-regular mont lg:text-5xl md:text-4xl text-lg uppercase tracking-wider xs:tracking-wide'>{t('homepage_section_3_title_3')}</span>
                     </div>
                 </h1>
             </section>
             <section className="normal_section bg-white pt-20 lg:pt-40 lg:pb-0">
                 <div className='flex md:flex-row flex-col justify-start items-center w-full gap-8 md:h-[500px]'>
-                    <div className='flex lg:flex-col flex-col-reverse lg:justify-start md:justify-evenly items-center gap-4 md:w-1/2 h-full'>
+                    <div className='flex lg:flex-col flex-col-reverse lg:justify-start md:justify-center xs:gap-6 md:gap-32 items-center lg:gap-4 md:w-1/2 h-full'>
                         <span className="tittle_v3 md:w-[320px] md:text-4xl text-2xl text-black font-medium tracking-widest text-center">{t('homepage_section_4_title')}</span>
                         <img src="/assets/images/homepage/hormigas.png" alt="" className=" w-1/2 lg:py-10 md:w-[200px]" />
                     </div>
