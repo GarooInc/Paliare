@@ -37,19 +37,29 @@ export default async function Home({ params: { locale }}) {
 
     function boldUppercase(text) {
         return text.split(' ').map(word => {
-            if (word === word.toUpperCase() && /^[A-Z]+$/.test(word)) {
+            if (word === word.toUpperCase() && /^[A-Z]+.$/.test(word)) {
             return `<strong>${word}</strong>`;
           }
           return word;
         }).join(' ');
-      }
+    }
+
+    function underlineUppercase(text) {
+        return text.split(' ').map(word => {
+            if (word === word.toUpperCase() && /^[A-Z]+.$/.test(word)) {
+                return `<span class='subtitle_mid text-black md:text-start text-center tracking-wider' style='text-decoration: underline; text-transform:lowercase;'>${word}</span>`;
+            }
+            return word;
+        }).join(' ');
+    }
+    
 
     return (
         <TranslationsProvider locale={locale} namespaces={namespaces} resources={resources}>
         <main className="flex min-h-screen w-full flex-col">
             <NavBar primary/>
             <section className="firstSection section_img_background gap-2">
-                <div className='lg:h-40 h-10'>
+                <div className='lg:h-32 h-10'>
                     <img
                         className="lg:h-32 md:h-28 w-auto lg:block xs:hidden"
                         src="/assets/images/homepage/Paliare-black.png"
@@ -66,7 +76,7 @@ export default async function Home({ params: { locale }}) {
             </section>
             <section className="normal_section lg:pt-20 lg:pb-0 py-10 min-h-screen bg-white">
                 <div className="w-full flex lg:justify-start justify-center">
-                    <h1 className="lg:text-3xl text-xl mont lg:w-1/4 w-3/4 text-center lg:text-start tracking-wider">
+                    <h1 className="lg:text-3xl text-xl mont lg:w-1/3 w-3/4 text-center lg:text-start tracking-wider">
                         <span className='text-black font-bold mr-2 uppercase'>{t('homepage_section_1_title_1')}</span>
                         <span className='text-black font-light uppercase'>{t('homepage_section_1_title_1_1')}</span>
                     </h1>
@@ -90,15 +100,15 @@ export default async function Home({ params: { locale }}) {
                 <span className="text-white mont font-bold text-center lg:text-2xl py-10 tracking-wider">{t('homepage_section_2_subtitle')}</span>
             </div>
             <Carousel images={images} text={t ('homepage_section_2_slides_more')} />
-            <section className="normal_section bg-lightgray lg:py-60 py-20 section_doodle">
-                <h1 className="text-3xl flex mont flex-col text-center md:w-2/3 gap-6">
+            <section className="normal_section bg-lightgray lg:py-60 md:py-40 py-20 section_doodle">
+                <h1 className="text-3xl flex mont flex-col text-center lg:w-3/4 gap-6">
                     <div className='flex flex-col md:gap-2'>
-                        <span className='text-black font-normal mont lg:text-xl text-lg tracking-wider'>{t('homepage_section_3_title_0')}</span>
-                        <span className='text-black font-normal mont lg:text-xl text-lg tracking-wider'>{t('homepage_section_3_title_1')}</span>
+                        <span className='text-black font-normal mont md:text-xl text-sm tracking-wider'>{t('homepage_section_3_title_0')}</span>
+                        <span className='text-black font-normal mont md:text-xl text-sm tracking-wider'>{t('homepage_section_3_title_1')}</span>
                     </div>
                     <div className='flex flex-col lg:gap-4 w-full'>
-                        <span className='text-black font-regular mont lg:text-5xl text-xl uppercase tracking-wider'>{t('homepage_section_3_title_2')}</span>
-                        <span className='text-black font-regular mont lg:text-5xl text-xl uppercase tracking-wider'>{t('homepage_section_3_title_3')}</span>
+                        <span className='text-black font-regular mont md:text-5xl text-lg uppercase tracking-wider xs:tracking-wide'>{t('homepage_section_3_title_2')}</span>
+                        <span className='text-black font-regular mont md:text-5xl text-lg uppercase tracking-wider xs:tracking-wide'>{t('homepage_section_3_title_3')}</span>
                     </div>
                 </h1>
             </section>
@@ -109,7 +119,7 @@ export default async function Home({ params: { locale }}) {
                         <img src="/assets/images/homepage/hormigas.png" alt="" className=" w-1/2 lg:py-10 md:w-[200px]" />
                     </div>
                     <div className='flex flex-col lg:justify-start justify-center items-center gap-6 md:w-1/3 h-full'>
-                        <span className='subtitle_mid text-black md:text-start text-center tracking-wider'>{t('homepage_section_4_subtitle')}</span>
+                        <span className='subtitle_mid text-black md:text-start text-center tracking-wider' dangerouslySetInnerHTML={{ __html: underlineUppercase(t('homepage_section_4_subtitle')) }}></span>
                         <span className="small_subtitle text-black  md:text-start text-center tracking-wider">{t('homepage_section_4_text_1')} </span>
                         <span className="small_subtitle text-black  md:text-start text-center tracking-wider" dangerouslySetInnerHTML={{ __html: boldUppercase(t('homepage_section_4_text_2')) }}></span>
                         <a  href="/filosofia" className="text-black subtitle_mid underline font-medium w-full md:text-start text-center tracking-wider">{t('homepage_section_4_kwnowmore')}</a>
