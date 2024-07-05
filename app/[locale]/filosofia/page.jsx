@@ -29,9 +29,9 @@ export default async function Filosofia({ params: { locale }}) {
                 </div>
                 <div className="pt-10 md:py-20">
                         <div className="flex md:flex-row flex-col lg:w-full normal_section justify-center items-center lg:py-10 py-4 gap-4 lg:gap-0">
-                            <div className='md:w-1/2 w-full flex lg:justify-end justify-center'>
+                            <div className='md:w-1/2 w-full flex md:justify-end justify-center'>
                                 <h1 className="hidden lg:flex tittle tracking-widest text-black md:w-1/2 md:text-start text-center">{t('philosophy_section_2_text_1')}</h1>
-                                <h1 className="lg:hidden tittle md:px-0 px-10 lg:w-full text-black font-semibold uppercase">{t('philosophy_section_2_text_1')}</h1>
+                                <h1 className="lg:hidden tittle md:text-start md:mx-0 md:px-0 px-10 md:w-2/3 text-black font-semibold uppercase">{t('philosophy_section_2_text_1')}</h1>
                             </div>
                             <div className="flex flex-col md:w-1/2 w-full lg:pl-2 text-4xl lg:justify-start justify-center">
                                 <span className="small_subtitle lg:w-3/4 lg:text-start text-center md:text-start text-black">{t('philosophy_section_2_text_2')}</span>
