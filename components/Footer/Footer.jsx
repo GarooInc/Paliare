@@ -18,8 +18,8 @@ const Footer = () => {
     const router = useRouter()
 
   return (
-    <footer className="footer flex justify-between items-center p-10 bg-lightergray">
-        <div className='flex flex-col w-full gap-0'>
+    <footer className="footer flex justify-between items-center md:p-10 p-8 bg-lightergray">
+        <div className='flex flex-col w-full lg:gap-0 md:gap-2'>
             <div className='flex justify-between items-center w-full'>
                 <aside className="items-center grid-flow-col xs:hidden lg:block">
                     {
@@ -33,7 +33,7 @@ const Footer = () => {
                 </aside>
                 <img src="/assets/images/homepage/Paliare-black.png" alt="logo" className="lg:w-32 w-20" /> 
                 <nav className="flex justify-center items-center lg:gap-8 gap-4">
-                    <span className="text-darkgray mont lg:text-md xs:text-[8px] text-center tracking-wider">{t('header:lemma')}</span>
+                    <span className="text-darkgray mont lg:text-md xs:text-[8px] text-center tracking-wider leading-4">{t('header:lemma')}</span>
                     <div className='flex gap-2'>
                     <BsInstagram className="text-darkgray text-2xl" />
                     <FaFacebookF className="text-darkgray text-2xl" />
