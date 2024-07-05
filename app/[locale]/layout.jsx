@@ -5,7 +5,7 @@ export const metadata = {
     title: 'Paliare',
     description: 'Somos estudio de arquitectura e interiorismo. Generamos experiencias únicas a través de nuestros espacios y diseños.',
     url: '',
-    image: '/assets/images/paliareblanco.png',
+    image: '/assets/images/Paliare-black.png',
 }
 
 const RootLayout = ({children}) => {
@@ -13,7 +13,7 @@ const RootLayout = ({children}) => {
     <html lang="es">
         <head>
             <title>{metadata.title}</title>
-            <link rel="icon" type="image/png+xml" href="/assets/images/paliarenegro.png" />
+            <link rel="icon" type="image/png+xml" href="/assets/images/Paliare-blanco.png" />
             <meta name="description" content={metadata.description} />
             <meta name="viewport" content="width=device-width, initial-scale=1.0" />
             <meta property="og:title" content={metadata.title} />
