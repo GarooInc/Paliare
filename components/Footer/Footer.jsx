@@ -18,7 +18,7 @@ const Footer = () => {
     const router = useRouter()
 
   return (
-    <footer className="footer flex justify-between items-center p-10 bg-lightergray">
+    <footer className="footer flex justify-between items-center p-10 bg-lightergray relative">
         <aside className="items-center grid-flow-col xs:hidden lg:block">
             {
                 navigation.map((item, index) => (
@@ -30,6 +30,7 @@ const Footer = () => {
             }
         </aside>
         <img src="/assets/images/homepage/Paliare-black.png" alt="logo" className="lg:w-32 w-20" /> 
+        <a className="text-darkgray mont text-[10px] text-center absolute bottom-4 w-40" href='https://garooinc.com/'>By Garoo, Inc</a>
         <nav className="flex justify-center items-center lg:gap-8 gap-4">
             <span className="text-darkgray mont lg:text-md xs:text-[8px] text-center tracking-wider">{t('header:lemma')}</span>
             <div className='flex gap-2'>
