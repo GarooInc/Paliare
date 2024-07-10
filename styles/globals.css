@@ -130,7 +130,7 @@
 }
 
 .maintitle{
-  @apply lg:text-6xl lg:leading-[80px] leading-[60px] text-5xl font-anton text-center uppercase lg:w-1/2 xl:w-2/5 w-[75%] text-black tracking-wider;
+  @apply lg:text-6xl lg:leading-[80px] leading-[60px] text-5xl font-anton text-center uppercase lg:w-1/2 xl:w-2/5 w-[74%] text-black tracking-wider;
 }
 
 .title_cidi{
