@@ -45,7 +45,7 @@ export default async function Filosofia({ params: { locale }}) {
                     <img src="/assets/images/filosofia/filosofia.png" alt="hormigas" className="z-10 w-full md:h-[480px] lg:h-[680px] h-[180px] lg:object-contain object-cover lg:my-0 my-8" />
                     <div className='normal_section'>
                         <span className="subtitle lg:w-1/2 tracking-wider lg:pl-10 text-center pt-10 italic text-black">{t('philosophy_section_2_text_3')}</span>
-                        <span className="subtitle mont font-bold lg:w-1/2 lg:py-20 py-10 text-center text-black">{t('philosophy_section_2_text_4')}</span>
+                        <a href='/servicios' className="cursor-pointer subtitle mont font-bold lg:w-1/2 lg:py-20 py-10 text-center text-black">{t('philosophy_section_2_text_4')}</a>
                     </div>
                 </div>
             </div>
