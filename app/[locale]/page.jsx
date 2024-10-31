@@ -6,8 +6,32 @@ import LanguageSwitcher from '@/components/LanguageSwitcher/LanguageSwitcher'
 import Carousel from '@/components/Carousel/Carousel'
 import Footer from '@/components/Footer/Footer'
 
+
 const namespaces = ['homepage', 'header']
+
+export const metadata = {
+    metadataBase: new URL('https://paliarestudio.com'),
+    title: 'Paliare - Arquitectura y Diseño',
+    description: 'Somos estudio de arquitectura e interiorismo. Generamos experiencias únicas a través de nuestros espacios y diseños.', // Valor por defecto
+    openGraph: {
+        title: 'Paliare - Arquitectura y Diseño',
+        description: 'Somos estudio de arquitectura e interiorismo. Generamos experiencias únicas a través de nuestros espacios y diseños.',
+        images: [
+            {
+                url: '/assets/images/Paliare-black.png',
+                width: 800,
+                height: 600,
+            },
+        ],
+        url: 'https://paliarestudio.com/',
+    },
+};
+
+export const viewport = 'width=device-width, initial-scale=1.0';
+
+
 export default async function Home({ params: { locale }}) {
+
     const { t, resources } = await initTranslations(locale, namespaces)
 
     const images = [

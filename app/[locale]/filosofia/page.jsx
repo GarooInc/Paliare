@@ -7,6 +7,33 @@ import ArrowBack from '@/components/ArrowBack/ArrowBack'
 import Footer from '@/components/Footer/Footer'
 
 const namespaces = ['filosofia', 'header']
+
+export const metadata = {
+    metadataBase: new URL('https://paliarestudio.com'),
+    title: 'Filosofía - Paliare',
+    description: 'Descubre la filosofía de Paliare: Crear espacios armónicos a través del trabajo en equipo, donde convergen los sueños del cliente, el talento del equipo y la diligencia profesional.',
+    keywords: 'Paliare, arquitectura, diseño, filosofía, trabajo en equipo, armonía, sueños del cliente, diligencia profesional',
+    openGraph: {
+        title: 'Filosofía - Paliare',
+        description: 'En Paliare seguimos la filosofía del trabajo en equipo, logrando la armonía gracias a la dedicación de cada persona que ha dejado su huella en nuestros proyectos.',
+        url: 'https://paliarestudio.com/filosofia',
+        images: [
+            {
+                url: '/assets/images/filosofia/filosofia.png', // Cambia a la imagen relevante de la filosofía, si existe
+                width: 1200,
+                height: 630,
+                alt: 'Hormigas trabajando juntas, simbolizando el trabajo en equipo y la unidad.',
+            },
+        ],
+    },
+    twitter: {
+        title: 'Filosofía - Paliare',
+        description: 'Nuestra filosofía es simple: el mejor trabajo es el que se realiza en equipo. Descubre cómo Paliare crea espacios auténticos con armonía y dedicación.',
+        card: 'summary_large_image',
+        images: ['/assets/images/filosofia/filosofia.png'], // Cambia a la imagen relevante
+    },
+};
+
 export default async function Filosofia({ params: { locale }}) {
     const { t, resources } = await initTranslations(locale, namespaces)
 

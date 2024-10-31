@@ -9,6 +9,33 @@ import Timeline from '@/components/Timeline/Timeline'
 
 const namespaces = ['Servicios','header']
 
+export const metadata = {
+    metadataBase: new URL('https://paliarestudio.com'),
+    title: 'Servicios - Paliare',
+    description: 'Explora los servicios de Paliare: arquitectura, interiorismo y construcción. Creamos espacios únicos que reflejan tu personalidad, acompañándote en cada etapa del proceso.',
+    keywords: 'Paliare, arquitectura, diseño, interiorismo, construcción, espacios únicos, proceso de diseño, confianza, creatividad',
+    openGraph: {
+        title: 'Servicios - Paliare',
+        description: 'Desde el diseño hasta la construcción, Paliare te acompaña en cada etapa. Descubre nuestros servicios de arquitectura, interiorismo y construcción, donde el proceso se convierte en una obra de confianza y creatividad.',
+        url: 'https://paliarestudio.com/servicios',
+        images: [
+            {
+                url: '/assets/images/Paliare-black.png',
+                width: 1200,
+                height: 630,
+                alt: 'Espacio de arquitectura diseñado por Paliare, reflejando creatividad y confianza en cada detalle.',
+            },
+        ],
+    },
+    twitter: {
+        title: 'Servicios - Paliare',
+        description: 'Creamos espacios auténticos, acompañándote en cada paso del proceso. Descubre nuestros servicios de arquitectura, interiorismo y construcción.',
+        card: 'summary_large_image',
+        images: ['/assets/images/Paliare-black.png'], 
+    },
+};
+
+
 export default async function Servicios({ params: { locale }}) {
     const { t, resources } = await initTranslations(locale, namespaces)
     
